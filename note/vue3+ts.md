@@ -59,7 +59,7 @@
 + 更快、更可靠地将音乐、图片、视频、应用程序及其他文件发送给用户；
 + 来提供高性能、可扩展性及低成本的网络内容传递给用户； 
 
-![](https://github.com/ElIaukEux/vue3-study/blob/master/note/img/image-20230317214130971.png)
+![](./img/image-20230317214130971.png)
 
 **常用的CDN服务器可以大致分为两种**
 
@@ -137,11 +137,11 @@
 ## 4. MVVM模型
 
 + MVC是Model-View-Controller的简称，是在前期被使用非常框架的架构模式，比如iOS、前端；
-  + <img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230317221737084.png" alt="image-20230317221737084" style="zoom:50%;" />
+  + <img src=".\img\image-20230317221737084.png" alt="image-20230317221737084" style="zoom:50%;" />
 
 + MVM是Model--View-ViewModel的简称，是目前非常流行的架构模式；
 
-<img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230317221909853.png" alt="image-20230317221909853" style="zoom:50%;" /><img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230317222649782.png" alt="image-20230317222649782" style="zoom:50%;" />
+<img src=".\img\image-20230317221909853.png" alt="image-20230317221909853" style="zoom:50%;" /><img src=".\img\image-20230317222649782.png" alt="image-20230317222649782" style="zoom:50%;" />
 
 ## 5. createApp对象
 
@@ -257,7 +257,7 @@
     + 显示绑定 call apply bind
     + new绑定
 + 普通函数中this指向 --->  组件实例上的代理对象（data-->proxy）
-+ <img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230318105441941.png" alt="image-20230318105441941" style="zoom: 50%;" />
++ <img src=".\img\image-20230318105441941.png" alt="image-20230318105441941" style="zoom: 50%;" />
 
 ## 6.vue 源码
 
@@ -285,7 +285,7 @@ https://github.com/vuejs/core
 
 + 添加文件
 
-  + <img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230318100322875.png" alt="image-20230318100322875" style="zoom:50%;" />
+  + <img src=".\img\image-20230318100322875.png" alt="image-20230318100322875" style="zoom:50%;" />
 
   + ```htlm
     <body>
@@ -312,7 +312,7 @@ https://github.com/vuejs/core
 
 + --sourcemap(进入源代码)
 
-  + <img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230318100559460.png" alt="image-20230318100559460" style="zoom:50%;" />
+  + <img src=".\img\image-20230318100559460.png" alt="image-20230318100559460" style="zoom:50%;" />
 
 ## 7. vue3基本语法
 
@@ -352,7 +352,7 @@ https://github.com/vuejs/core
 
   + 缩写  ：
 
-  + <img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230318115639151.png" alt="image-20230318115639151" style="zoom:50%;" />
+  + <img src=".\img\image-20230318115639151.png" alt="image-20230318115639151" style="zoom:50%;" />
 
   + **绑定class**
 
@@ -369,7 +369,7 @@ https://github.com/vuejs/core
         <div :class="['abc','cbd',{isActive:true]">  // 数组语法可以嵌套对象语法
         ```
 
-    + <img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230318121327916.png" alt="image-20230318121327916" style="zoom:50%;" />
+    + <img src=".\img\image-20230318121327916.png" alt="image-20230318121327916" style="zoom:50%;" />
 
   + **绑定style**
 
@@ -380,20 +380,20 @@ https://github.com/vuejs/core
         <div :style="{color: finalColor,fontSize:'30px'}">哈哈哈</div>
         ```
 
-      + <img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230318122121437.png" alt="image-20230318122121437" style="zoom:50%;" />
+      + <img src=".\img\image-20230318122121437.png" alt="image-20230318122121437" style="zoom:50%;" />
 
     + 数组语法  将多个样式对象应用到同一个元素上；
 
-      + <img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230318122254278.png" alt="image-20230318122254278" style="zoom:50%;" />
+      + <img src=".\img\image-20230318122254278.png" alt="image-20230318122254278" style="zoom:50%;" />
 
   + **动态绑定属性**
 
     + 前端我们无论绑定src、href、class、style，属性名称都是固定的；如果属性名称不是固定的，我们可以使用：[属性名]=“值”的格式来定义这种绑定的方式，我们称之为动态绑定属性；
-    + <img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230318122813063.png" alt="image-20230318122813063" style="zoom:50%;" />
+    + <img src=".\img\image-20230318122813063.png" alt="image-20230318122813063" style="zoom:50%;" />
 
   + **直接绑定一个对象**
 
-    + <img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230318124449946.png" alt="image-20230318124449946" style="zoom:50%;" />
+    + <img src=".\img\image-20230318124449946.png" alt="image-20230318124449946" style="zoom:50%;" />
 
 + **v-on** 绑定事件-->交互
 
@@ -410,13 +410,13 @@ https://github.com/vuejs/core
     + .middle-只当点击鼠标中键时触发。
     + .passive-{passive:true}模式添加侦听器
   + **绑定一个对象**  可以给某一个元素添加多种事件
-    + <img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230318130253009.png" alt="image-20230318130253009" style="zoom:50%;" />
+    + <img src=".\img\image-20230318130253009.png" alt="image-20230318130253009" style="zoom:50%;" />
   + **绑定一个表达式**
-    + <img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230318130127569.png" alt="image-20230318130127569" style="zoom:50%;" />
+    + <img src=".\img\image-20230318130127569.png" alt="image-20230318130127569" style="zoom:50%;" />
   + **event对象**
     + 默认会传递一个event对象
     + 如果还需要传递其他参数，则可以使用$event传递
-      + <img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230318130917176.png" alt="image-20230318130917176" style="zoom:50%;" />
+      + <img src=".\img\image-20230318130917176.png" alt="image-20230318130917176" style="zoom:50%;" />
 
 
 ### 7.3 条件渲染
@@ -428,7 +428,7 @@ https://github.com/vuejs/core
 + 这些内容只有在条件为true时，才会被渲染出来
 + 这三个指令与JavaScript的条件语句if、else、else if类似；
 
-<img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230318191759140.png" alt="image-20230318191759140" style="zoom:50%;" />
+<img src=".\img\image-20230318191759140.png" alt="image-20230318191759140" style="zoom:50%;" />
 
 **v-if的渲染原理**：
 
@@ -466,14 +466,14 @@ https://github.com/vuejs/core
 
   + item是我们给每项元素起的一个**别名**，这个别名可以自定来定义；
 
-+ <img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230318203442504.png" alt="image-20230318203442504" style="zoom:50%;" />
++ <img src=".\img\image-20230318203442504.png" alt="image-20230318203442504" style="zoom:50%;" />
 
 + 我们知道，在遍历一个数组的时候会经常需要拿到数组的索引：
   + 如果我们需要索引，可以使用格式："（item，index）in数组"；
   + 注意上面的顺序：数组元素项item是在前面的，索引项index是在后面的；
 + 类似于v-if，你可以使用**template**元素来循环渲染一段包含多个元素的内容：
   + 我们使用template：来对多个元素进行包裹，而不是使用div来完成；
-  + <img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230318205619858.png" alt="image-20230318205619858" style="zoom:50%;" />
+  + <img src=".\img\image-20230318205619858.png" alt="image-20230318205619858" style="zoom:50%;" />
 
 #### 数组更新检测
 
@@ -495,17 +495,17 @@ https://github.com/vuejs/core
 
 + 事实上，无论是组件还是元素，它们最终在Vue中表示出来的都是一个个VNode；
 + VNode的本质是一个JavaScript对象
-  + <img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230319002337854.png" alt="image-20230319002337854" style="zoom:50%;" /><img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230319002518191.png" alt="image-20230319002518191" style="zoom:50%;" />
+  + <img src=".\img\image-20230319002337854.png" alt="image-20230319002337854" style="zoom:50%;" /><img src=".\img\image-20230319002518191.png" alt="image-20230319002518191" style="zoom:50%;" />
 
 ​	::three:**虚拟DOM ** --->做跨平台，可以在服务端渲染，也可在移动端进行渲染
 
 ​	如果我们不只是一个简单的div，而是有一大堆的元素，那么它们应该会形成一个**VNode Tree**
 
-<img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230319002849157.png" alt="image-20230319002849157" style="zoom:50%;" />
+<img src=".\img\image-20230319002849157.png" alt="image-20230319002849157" style="zoom:50%;" />
 
 ::four:**插入F案例**
 
-<img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230319102012188.png" alt="image-20230319102012188" style="zoom:50%;" />
+<img src=".\img\image-20230319102012188.png" alt="image-20230319102012188" style="zoom:50%;" />
 
 上面的案例在更新时对于ui和button是不需要更新的，只需要更新li列表。
 
@@ -517,27 +517,27 @@ https://github.com/vuejs/core
 
 + 对于有key和没有key会调用两个不同的方法
   + 判断是否有key
-    + <img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230319110511250.png" alt="image-20230319110511250" style="zoom:50%;" />
+    + <img src=".\img\image-20230319110511250.png" alt="image-20230319110511250" style="zoom:50%;" />
 
 + **有key**，那么就使用patchkeyedChildren方法 （比较中如果新旧都有值，则进行的是更新操作(update)，如果只有新节点，则进行的是挂载操作(mount),只有旧节点，则进行的是卸载操作(unmount))
 
   + **从头开始遍历（while），比较新旧节点是否相同（节点类型相同，并且key相同）**
     + 相同则，继续遍历执行patch操作
     + 不同则，跳出循环
-    + ![image-20230319115223251](D:\a-study\study-code\09-vue3+T3\note\img\image-20230319115223251.png)
+    + ![image-20230319115223251](.\img\image-20230319115223251.png)
       + **从尾部开始遍历**
         + 相同则继续遍历
         + 不同则跳出循环
-        + ![image-20230319115244315](D:\a-study\study-code\09-vue3+T3\note\img\image-20230319115244315.png)
+        + ![image-20230319115244315](.\img\image-20230319115244315.png)
     + **如果旧节点遍历完了，依然有新的节点，那么就创建新的节点并进行添加** 
-      + ![image-20230319115314013](D:\a-study\study-code\09-vue3+T3\note\img\image-20230319115314013.png)
+      + ![image-20230319115314013](.\img\image-20230319115314013.png)
   +  **如果新的节点遍历完毕，但是依然有旧的节点，那么就移除旧节点**
-    + ![image-20230319115353607](D:\a-study\study-code\09-vue3+T3\note\img\image-20230319115353607.png)
+    + ![image-20230319115353607](.\img\image-20230319115353607.png)
 
   + **特殊的情况，中间还有很多未知的或者乱序的节点：**
-    + ![image-20230319115619405](D:\a-study\study-code\09-vue3+T3\note\img\image-20230319115619405.png)
+    + ![image-20230319115619405](.\img\image-20230319115619405.png)
 
-<img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230319110542040.png" alt="image-20230319110542040" style="zoom:50%;" />
+<img src=".\img\image-20230319110542040.png" alt="image-20230319110542040" style="zoom:50%;" />
 
 
 
@@ -551,7 +551,7 @@ https://github.com/vuejs/core
     + 如果新的长度短则操作结束
     + 如果新的长度长则重新剩余元素直接添加到后面即可。
 
-<img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230319110348096.png" alt="image-20230319110348096" style="zoom:50%;" />
+<img src=".\img\image-20230319110348096.png" alt="image-20230319110348096" style="zoom:50%;" />
 
 **所以，Vue在进行diff算法的时候，会尽量利用我们的key来进行优化操作：**
 
@@ -675,22 +675,22 @@ https://github.com/vuejs/core
 
 **基本使用：**
 
-<img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230319181435466.png" alt="image-20230319181435466" style="zoom:50%;" /><img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230319181447227.png" alt="image-20230319181447227" style="zoom:50%;" />
+<img src=".\img\image-20230319181435466.png" alt="image-20230319181435466" style="zoom:50%;" /><img src=".\img\image-20230319181447227.png" alt="image-20230319181447227" style="zoom:50%;" />
 
 ​	
 
 **深度监听**  watch在侦听对象时，如果只是内部某个属性发生改变，则不会做出响应，就可以使用深度监听
 
 + **监听属性的值为对象**--> handler 监听函数，**deep是否深度监听**，immediate页面一进来就会立即监听。 
-  + ![image-20230319183054468](D:\a-study\study-code\09-vue3+T3\note\img\image-20230319183054468.png)
+  + ![image-20230319183054468](.\img\image-20230319183054468.png)
   + 其中newValue,oldValue为引用对象类型时，所以指向的是同一个对象，所以打印出来结果一致。
 
 + **监听属性的值为字符串**  可以将该字符串对应的方法写在methods中进行调用
-  + ![image-20230319184435396](D:\a-study\study-code\09-vue3+T3\note\img\image-20230319184435396.png)
+  + ![image-20230319184435396](.\img\image-20230319184435396.png)
 
 + **监听属性的值为数组时** 如果监听时有多个函数要执行，则可以使用数组，它们会逐一调用
 
-  + <img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230319184714037.png" alt="image-20230319184714037" style="zoom:50%;" />
+  + <img src=".\img\image-20230319184714037.png" alt="image-20230319184714037" style="zoom:50%;" />
 
 + **其他写法**
 
@@ -700,11 +700,11 @@ https://github.com/vuejs/core
     + 第一个参数是要侦听的源；
     + 第二个参数是侦听的回调函数callback；
     + 第三个参数是额外的其他选项，比如deep、immediate；
-    + ![image-20230319190641620](D:\a-study\study-code\09-vue3+T3\note\img\image-20230319190641620.png)
+    + ![image-20230319190641620](.\img\image-20230319190641620.png)
 
 **综合案例--书籍**
 
-![image-20230319191547950](D:\a-study\study-code\09-vue3+T3\note\img\image-20230319191547950.png)
+![image-20230319191547950](.\img\image-20230319191547950.png)
 
 ```js
 <!DOCTYPE html>
@@ -830,7 +830,7 @@ https://github.com/vuejs/core
 
 + 通过创建一个组件，把data中数据的每一项传递过去，然后在组件中监听props中父组件传递过来的值即 可
 
-![image-20230319202814001](D:\a-study\study-code\09-vue3+T3\note\img\image-20230319202814001.png)
+![image-20230319202814001](.\img\image-20230319202814001.png)
 
 ### 7.7 v-model
 
@@ -847,45 +847,45 @@ https://github.com/vuejs/core
 + 它会根据控件类型自动选取正确的方法来更新元素；
 + 尽管有些神奇，**但v-model本质上不过是语法糖**，它**负责监听用户的输入事件来更新数据**，并在某种极端场景下进行一些特殊处理；
 
-![image-20230319224535679](D:\a-study\study-code\09-vue3+T3\note\img\image-20230319224535679.png)
+![image-20230319224535679](.\img\image-20230319224535679.png)
 
 #### v-model原理
 
 + v-bind绑定value属性的值；
 + v-on绑定input事件监听到函数中，函数会获取最新的值赋值到绑定的属性中；
-+ ![image-20230319224630308](D:\a-study\study-code\09-vue3+T3\note\img\image-20230319224630308.png)
++ ![image-20230319224630308](.\img\image-20230319224630308.png)
 
 #### v-model绑定textarea
 
-![image-20230319230115326](D:\a-study\study-code\09-vue3+T3\note\img\image-20230319230115326.png)
+![image-20230319230115326](.\img\image-20230319230115326.png)
 
 #### v-model绑定checkbox
 
 + **单个勾选框**
   + v-model即为布尔值。
   + 此时input的value：并不影响v-model的值。
-  + ![image-20230319230213380](D:\a-study\study-code\09-vue3+T3\note\img\image-20230319230213380.png)
+  + ![image-20230319230213380](.\img\image-20230319230213380.png)
 + **多个复选框**
   + 当是多个复选框时，因为可以选中多个，所以对应的data中属性是一个数组
   + 当选中某一个时，就会将**input的value**添加到数组中
-  + ![image-20230319230322611](D:\a-study\study-code\09-vue3+T3\note\img\image-20230319230322611.png)
+  + ![image-20230319230322611](.\img\image-20230319230322611.png)
 
 #### v-model绑定radio
 
 ​	**用于选择其中一项；**
 
-​	![image-20230319230358180](D:\a-study\study-code\09-vue3+T3\note\img\image-20230319230358180.png)
+​	![image-20230319230358180](.\img\image-20230319230358180.png)
 
 #### v-model绑定select
 
 + **单选**
   + v-model绑定的是一个值；
   +  当我们选中option中的一个时，会将它对应的value赋值到fruit中；
-  + ![image-20230319230458582](D:\a-study\study-code\09-vue3+T3\note\img\image-20230319230458582.png)
+  + ![image-20230319230458582](.\img\image-20230319230458582.png)
 + 多选
   + v-model绑定的是一个数组；
   + 当选中多个值时，就会将选中的option对应的value添加到数组fruit中；
-  + ![image-20230319230549087](D:\a-study\study-code\09-vue3+T3\note\img\image-20230319230549087.png)
+  + ![image-20230319230549087](.\img\image-20230319230549087.png)
 
 #### v-model值绑定
 
@@ -903,20 +903,20 @@ https://github.com/vuejs/core
     的属性进行同步；
   + 如果我们在v-model后跟上lazy修饰符，**那么会将绑定的事件切换为change 事件**，只有在提交时（比如回车）
     才会触发；
-  + ![image-20230319233022606](D:\a-study\study-code\09-vue3+T3\note\img\image-20230319233022606.png)
+  + ![image-20230319233022606](.\img\image-20230319233022606.png)
 
 + **number**
   + message总是**string类型**，即使在我们设置**type为number也是string类型**；
   + 如果我们希望转换为**数字类型**，那么可以使用**.number** 修饰符：
   + 另外，在我们进行逻辑判断时，如果是一个string类型，在可以转化的情况下会进行隐式转换的：
     + 下面的score在进行判断的过程中会**进行隐式转化**的；
-    + ![image-20230319233405124](D:\a-study\study-code\09-vue3+T3\note\img\image-20230319233405124.png)
+    + ![image-20230319233405124](.\img\image-20230319233405124.png)
 
 + **trim**
 
   + 如果要自动过滤用户输入的首尾空白字符，可以给v-model添加trim 修饰符：
 
-  + ![image-20230319233859746](D:\a-study\study-code\09-vue3+T3\note\img\image-20230319233859746.png)
+  + ![image-20230319233859746](.\img\image-20230319233859746.png)
 
 ## 8.vue组件化
 
@@ -927,7 +927,7 @@ https://github.com/vuejs/core
 + 全局组件需要使用我们全局创建的app来注册组件；
 + 通过component方法传入组件名称、组件对象即可注册一个全局组件了；
 + 之后，我们可以在App组件的template中直接使用这个全局组件：
-+ <img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230322220006202.png" alt="image-20230322220006202" style="zoom:50%;" /><img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230322220020367.png" alt="image-20230322220020367" style="zoom:50%;" />
++ <img src=".\img\image-20230322220006202.png" alt="image-20230322220006202" style="zoom:50%;" /><img src=".\img\image-20230322220020367.png" alt="image-20230322220020367" style="zoom:50%;" />
 + **定义组件名**的方式有两种：
   + **使用kebab-case（短横线分割符）**
     + 当使用kebab-case (短横线分隔命名) 定义一个组件时，你也必须在引用这个自定义元素时使用kebab-case，
@@ -950,7 +950,7 @@ https://github.com/vuejs/core
   + 比如之前的App组件中，我们有data、computed、methods等选项了，事实上还可以有一个components选
     项；
   + 该components选项对应的是一个对象，对象中的键值对是组件的名称: 组件对象；
-+ <img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230322221733631.png" alt="image-20230322221733631" style="zoom:50%;" />
++ <img src=".\img\image-20230322221733631.png" alt="image-20230322221733631" style="zoom:50%;" />
 
 ### 8.2 vue的开发模式
 
@@ -963,7 +963,7 @@ https://github.com/vuejs/core
 
 ### 8.3 组件的通信
 
-![image-20230416172733920](D:\a-study\study-code\09-vue3+T3\note\img\image-20230416172733920.png)
+![image-20230416172733920](.\img\image-20230416172733920.png)
 
 #### 8.3.1 父组件传递给子组件
 
@@ -973,9 +973,9 @@ https://github.com/vuejs/core
 + 父组件给这些attribute赋值，子组件通过attribute的名称获取到对应的值；
   + **Props有两种常见的写法：**
     + 方式一：字符串数组，数组中的字符串就是attribute的名称；
-      + ![image-20230416173019803](D:\a-study\study-code\09-vue3+T3\note\img\image-20230416173019803.png)
+      + ![image-20230416173019803](.\img\image-20230416173019803.png)
     + 方式二：对象类型，对象类型我们可以在指定attribute名称的同时，指定它需要传递的类型、是否是必须的、默认值等等；
-      + ![image-20230416173053097](D:\a-study\study-code\09-vue3+T3\note\img\image-20230416173053097.png)
+      + ![image-20230416173053097](.\img\image-20230416173053097.png)
       + type的类型
         + String
         + Number
@@ -986,44 +986,44 @@ https://github.com/vuejs/core
         + Function
         + Symbol
       + 对象类型的其他写法
-        + ![image-20230416173203171](D:\a-study\study-code\09-vue3+T3\note\img\image-20230416173203171.png)
-        + ![image-20230416173209817](D:\a-study\study-code\09-vue3+T3\note\img\image-20230416173209817.png)
+        + ![image-20230416173203171](.\img\image-20230416173203171.png)
+        + ![image-20230416173209817](.\img\image-20230416173209817.png)
       + Prop 的大小写命名
         + HTML 中的attribute 名是大小写不敏感的，所以浏览器会把所有大写字符解释为小写字符；
         + 这意味着当你使用DOM 中的模板时，camelCase (驼峰命名法) 的prop 名需要使用其等价的kebab-case (短
           横线分隔命名) 命名；
-        + ![image-20230416173328518](D:\a-study\study-code\09-vue3+T3\note\img\image-20230416173328518.png)
+        + ![image-20230416173328518](.\img\image-20230416173328518.png)
 
 **非Prop的Attribute**
 
 ​	当我们传递给一个组件某个属性，但是该属性并没有定义对应的props或者emits时，就称之为非Prop的Attribute；常见的包括class、style、id属性等；
 
 + Attribute继承：当组件有单个根节点时，非Prop的Attribute将自动添加到根节点的Attribute中：
-+ ![image-20230416173623455](D:\a-study\study-code\09-vue3+T3\note\img\image-20230416173623455.png)
++ ![image-20230416173623455](.\img\image-20230416173623455.png)
 + **禁用Attribute继承和多根节点**
   + 如果我们不希望组件的根元素继承attribute，可以在组件中设置inheritAttrs: false：
     + 禁用attribute继承的常见情况是需要将attribute应用于根元素之外的其他元素；
     + 可以通过$attrs来访问所有的非props的attribute；
-    + ![image-20230416173752155](D:\a-study\study-code\09-vue3+T3\note\img\image-20230416173752155.png)
+    + ![image-20230416173752155](.\img\image-20230416173752155.png)
   + **多个根节点的attribute**
     + 多个根节点的attribute如果没有显示的绑定，那么会报警告，我们必须手动的指定要绑定到哪一个属性上：
-    + ![image-20230416173835014](D:\a-study\study-code\09-vue3+T3\note\img\image-20230416173835014.png)
+    + ![image-20230416173835014](.\img\image-20230416173835014.png)
 
 #### 8.3.2 子组件传递给父组件
 
 + 首先，我们需要在子组件中定义好在某些情况下触发的事件名称；
 + 其次，在父组件中以v-on的方式传入要监听的事件名称，并且绑定到对应的方法中；
 + 最后，在子组件中发生某个事件的时候，根据事件名称触发对应的事件；
-+ <img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230416175017056.png" alt="image-20230416175017056" style="zoom:50%;" /><img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230416175031430.png" alt="image-20230416175031430" style="zoom:50%;" />
++ <img src=".\img\image-20230416175017056.png" alt="image-20230416175017056" style="zoom:50%;" /><img src=".\img\image-20230416175031430.png" alt="image-20230416175031430" style="zoom:50%;" />
 
 ​	
 
 + 传参
-  + ![image-20230416175125832](D:\a-study\study-code\09-vue3+T3\note\img\image-20230416175125832.png)
+  + ![image-20230416175125832](.\img\image-20230416175125832.png)
 
 
 
-+ 验证参数![image-20230416175215618](D:\a-study\study-code\09-vue3+T3\note\img\image-20230416175215618.png)
++ 验证参数![image-20230416175215618](.\img\image-20230416175215618.png)
 
 #### 8.3.3 非父子组件的通信
 
@@ -1031,14 +1031,14 @@ https://github.com/vuejs/core
 
   + 比如有一些深度嵌套的组件，子组件想要获取父组件的部分内容；在这种情况下，如果我们仍然将props沿着组件链逐级传递下去，就会非常的麻烦；对于这种情况下，我们可以使用Provide 和Inject ：
   + 无论层级结构有多深，父组件都可以作为其所有子组件的**依赖提供者**；父组件有一个**provide 选项**来提供数据；子组件有一个**inject 选项**来开始使用这些数据；
-  + ![image-20230416175732965](D:\a-study\study-code\09-vue3+T3\note\img\image-20230416175732965.png)
+  + ![image-20230416175732965](.\img\image-20230416175732965.png)
   + 如果Provide中提供的一些数据是来自data，那么我们可能会想要通过this来获取：那么**Provide就必须是一个函数**
-    + ![image-20230416175900305](D:\a-study\study-code\09-vue3+T3\note\img\image-20230416175900305.png)
+    + ![image-20230416175900305](.\img\image-20230416175900305.png)
     + **处理响应式数据**
       + 如果我们修改了this.names的内容，那么使用length的子组件是不会响应式的，这是因为当我们修改了names之后，之前在provide中引入的this.names.length 本身并不是响应式的；可以使用响应式的一些API来完成这些功能，**比如说computed函数；**
-      + ![image-20230416180207656](D:\a-study\study-code\09-vue3+T3\note\img\image-20230416180207656.png)![image-20230416180236525](D:\a-study\study-code\09-vue3+T3\note\img\image-20230416180236525.png)
+      + ![image-20230416180207656](.\img\image-20230416180207656.png)![image-20230416180236525](.\img\image-20230416180236525.png)
       + 需要配置
-      + ![image-20230416180323440](D:\a-study\study-code\09-vue3+T3\note\img\image-20230416180323440.png)
+      + ![image-20230416180323440](.\img\image-20230416180323440.png)
 
 + **Mitt全局事件总线；**
 
@@ -1050,14 +1050,14 @@ https://github.com/vuejs/core
 
     + 封装一个工具eventbus.js：
 
-      + ![image-20230416180515459](D:\a-study\study-code\09-vue3+T3\note\img\image-20230416180515459.png)
+      + ![image-20230416180515459](.\img\image-20230416180515459.png)
 
       + 在App.vue中触发事件；在Home.vue中监听事件；
 
-        + <img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230416182112743.png" alt="image-20230416182112743" style="zoom:50%;" /><img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230416182117331.png" alt="image-20230416182117331" style="zoom:50%;" />
+        + <img src=".\img\image-20230416182112743.png" alt="image-20230416182112743" style="zoom:50%;" /><img src=".\img\image-20230416182117331.png" alt="image-20230416182117331" style="zoom:50%;" />
 
         + 取消掉之前注册的函数监听
-          + ![image-20230416182237486](D:\a-study\study-code\09-vue3+T3\note\img\image-20230416182237486.png)
+          + ![image-20230416182237486](.\img\image-20230416182237486.png)
 
 ### 8.4 插槽
 
@@ -1072,28 +1072,28 @@ https://github.com/vuejs/core
 + 基本使用
 
   + 一个组件MySlotCpn.vue：该组件中有一个插槽，我们可以在插槽中放入需要显示的内容；在App.vue中使用它们：我们可以插入普通的内容、html元素、组件元素，都可以是可以的；
-  + <img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230416182754111.png" alt="image-20230416182754111" style="zoom:50%;" /><img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230416182804118.png" alt="image-20230416182804118" style="zoom:50%;" />
+  + <img src=".\img\image-20230416182754111.png" alt="image-20230416182754111" style="zoom:50%;" /><img src=".\img\image-20230416182804118.png" alt="image-20230416182804118" style="zoom:50%;" />
   + **插槽的默认内容**
     + 有时候我们希望在使用插槽时，如果没有插入对应的内容，那么我们需要显示一个默认的内容：
-    + ![image-20230416182915386](D:\a-study\study-code\09-vue3+T3\note\img\image-20230416182915386.png)
+    + ![image-20230416182915386](.\img\image-20230416182915386.png)
 
   + **多个插槽的效果**
     + 如果一个组件中含有多个插槽，我们插入多个内容时，会发现默认情况下每个插槽都会获取到我们插入的内容来显示；
-    + ![image-20230416183016403](D:\a-study\study-code\09-vue3+T3\note\img\image-20230416183016403.png)
+    + ![image-20230416183016403](.\img\image-20230416183016403.png)
   + **具名插槽的使用**
     + 具名插槽顾名思义就是给插槽起一个名字，<slot> 元素有一个特殊的attribute：name；
     + 一个不带name 的slot，会带有隐含的名字default；
-    + ![image-20230416183123515](D:\a-study\study-code\09-vue3+T3\note\img\image-20230416183123515.png)
+    + ![image-20230416183123515](.\img\image-20230416183123515.png)
     + 缩写：把参数之前的所有内容(v-slot:) 替换为字符#；
 
   + **动态插槽名**
     + 可以通过v-slot:[dynamicSlotName]方式动态绑定一个名称；
-    + ![image-20230416183202760](D:\a-study\study-code\09-vue3+T3\note\img\image-20230416183202760.png)
+    + ![image-20230416183202760](.\img\image-20230416183202760.png)
 
   + **渲染作用域**
 
     + 父级模板里的所有内容都是在父级作用域中编译的；子模板里的所有内容都是在子作用域中编译的；
-    + ![image-20230416183511950](D:\a-study\study-code\09-vue3+T3\note\img\image-20230416183511950.png)
+    + ![image-20230416183511950](.\img\image-20230416183511950.png)
 
   + **作用域插槽**
 
@@ -1105,44 +1105,44 @@ https://github.com/vuejs/core
       + 4.定义插槽的prop
       + 5.通过v-slot:default的方式获取到slot的props
       + 6.使用slotProps中的item和index
-      + ![image-20230416183712995](D:\a-study\study-code\09-vue3+T3\note\img\image-20230416183712995.png)
+      + ![image-20230416183712995](.\img\image-20230416183712995.png)
 
     + **独占默认插槽的缩写**
       + 如果我们的插槽是默认插槽default，那么在使用的时候v-slot:default="slotProps"可以简写为vslot="slotProps"：
-      + ![image-20230416185038010](D:\a-study\study-code\09-vue3+T3\note\img\image-20230416185038010.png)
+      + ![image-20230416185038010](.\img\image-20230416185038010.png)
       + 并且如果我们的插槽只有默认插槽时，组件的标签可以被当做插槽的模板来使用，这样，我们就可以将v-slot 直接用在组件上：
-      + ![image-20230416185131019](D:\a-study\study-code\09-vue3+T3\note\img\image-20230416185131019.png)
+      + ![image-20230416185131019](.\img\image-20230416185131019.png)
 
     + **默认插槽和具名插槽混合**
 
       + 如果有默认插槽和具名插槽，那么按照完整的template来编写。
-      + ![image-20230416185228406](D:\a-study\study-code\09-vue3+T3\note\img\image-20230416185228406.png)
+      + ![image-20230416185228406](.\img\image-20230416185228406.png)
 
       + 只要出现多个插槽，那么所有的插槽使用完整的基于<template> 的语法：
-      + ![image-20230416185321490](D:\a-study\study-code\09-vue3+T3\note\img\image-20230416185321490.png)
+      + ![image-20230416185321490](.\img\image-20230416185321490.png)
 
 ### 8.5 动态组件
 
 ​	实现了一个功能：点击一个tab-bar，切换不同的组件显示；
 
-​	![image-20230416185459911](D:\a-study\study-code\09-vue3+T3\note\img\image-20230416185459911.png)
+​	![image-20230416185459911](.\img\image-20230416185459911.png)
 
 + **方式一**通过v-if来判断，显示不同的组件；
-  + ![image-20230416185601059](D:\a-study\study-code\09-vue3+T3\note\img\image-20230416185601059.png)
+  + ![image-20230416185601059](.\img\image-20230416185601059.png)
 + **方式二**动态组件的方式；
   + 动态组件是使用**component 组件**，通过一个特殊的attribute **is** 来实现：
-  + ![image-20230416185651115](D:\a-study\study-code\09-vue3+T3\note\img\image-20230416185651115.png)
+  + ![image-20230416185651115](.\img\image-20230416185651115.png)
   + **这个currentTab的值需要是**
     + 可以是通过component函数注册的组件；
     + 在一个组件对象的components对象中注册的组件；
   + **动态组件的传值**
-    + ![image-20230416185821431](D:\a-study\study-code\09-vue3+T3\note\img\image-20230416185821431.png)
+    + ![image-20230416185821431](.\img\image-20230416185821431.png)
 
 ### 8.6 keep-alive
 
 ​	在切换组件时，about组件会被销毁掉，再次回来时会重新创建组件；但是，在开发中某些情况我们希望继续保持组件的状态，而不是销毁掉，这个时候我们就可以使用一个内置组件：keep-alive。
 
-​	![image-20230416190015701](D:\a-study\study-code\09-vue3+T3\note\img\image-20230416190015701.png)
+​	![image-20230416190015701](.\img\image-20230416190015701.png)
 
 + **keep-alive属性**
 
@@ -1152,12 +1152,12 @@ https://github.com/vuejs/core
   + **max** - number | string。最多可以缓存多少组件实例，一旦达到这个数字，那么缓存组件中最近没有被访问的实例会被销毁；
 
 + include 和exclude prop 允许组件有条件地缓存：二者都可以用逗号分隔字符串、正则表达式或一个数组来表示；匹配首先检查组件自身的name 选项；
-  + ![image-20230416190230660](D:\a-study\study-code\09-vue3+T3\note\img\image-20230416190230660.png)
+  + ![image-20230416190230660](.\img\image-20230416190230660.png)
 + **缓存组件的生命周期**
   + 对于缓存的组件来说，再次进入时，我们是不会执行created或者mounted等生命周期函数的：
   + 但是有时候我们确实希望监听到何时重新进入到了组件，何时离开了组件；
   + 这个时候我们可以使用activated 和deactivated 这两个生命周期钩子函数来监听；
-  + ![image-20230416190337375](D:\a-study\study-code\09-vue3+T3\note\img\image-20230416190337375.png)
+  + ![image-20230416190337375](.\img\image-20230416190337375.png)
 
 ### 8.7异步组件
 
@@ -1165,14 +1165,14 @@ https://github.com/vuejs/core
 
 + **defineAsyncComponent**接受两种类型的参数：
   + 类型一：工厂函数，该工厂函数需要返回一个Promise对象；
-    + ![image-20230422122026872](D:\a-study\study-code\09-vue3+T3\note\img\image-20230422122026872.png)
+    + ![image-20230422122026872](.\img\image-20230422122026872.png)
   + 类型二：接受一个对象类型，对异步函数进行配置；
-    + ![image-20230422122041639](D:\a-study\study-code\09-vue3+T3\note\img\image-20230422122041639.png)
+    + ![image-20230422122041639](.\img\image-20230422122041639.png)
 + **Suspense组件**
   + Suspense是一个内置的全局组件，该组件有两个插槽：
     + default：如果default可以显示，那么显示default的内容；
     + fallback：如果default无法显示，那么会显示fallback插槽的内容；
-  + ![image-20230422122203164](D:\a-study\study-code\09-vue3+T3\note\img\image-20230422122203164.png)
+  + ![image-20230422122203164](.\img\image-20230422122203164.png)
 
 ## 9. Webpack的代码分包
 
@@ -1183,31 +1183,31 @@ https://github.com/vuejs/core
 + 打包时，代码的分包：
   + 所以，对于一些不需要立即使用的组件，我们可以单独对它们进行拆分，拆分成一些小的代码块chunk.js；
   +  这些chunk.js会在需要时从服务器加载下来，并且运行代码，显示对应的内容；
-  + ![image-20230416190707526](D:\a-study\study-code\09-vue3+T3\note\img\image-20230416190707526.png)
+  + ![image-20230416190707526](.\img\image-20230416190707526.png)
 
 + **Vue中实现异步组件**
   + 如果我们的项目过大了，对于某些组件我们希望通过异步的方式来进行加载（目的是可以对其进行分包处理），那么Vue中给我们提供了一个函数：**defineAsyncComponent**。
   + **defineAsyncComponent接受两种类型的参数：**
     + 类型一：工厂函数，该工厂函数需要返回一个Promise对象；
-    + ![image-20230416190832843](D:\a-study\study-code\09-vue3+T3\note\img\image-20230416190832843.png)
+    + ![image-20230416190832843](.\img\image-20230416190832843.png)
     + 类型二：接受一个对象类型，对异步函数进行配置；
-    + ![image-20230416190841005](D:\a-study\study-code\09-vue3+T3\note\img\image-20230416190841005.png)
+    + ![image-20230416190841005](.\img\image-20230416190841005.png)
 + **异步组件和Suspense**
   + Suspense是一个内置的全局组件，该组件有两个插槽：
     + default：如果default可以显示，那么显示default的内容；
     + fallback：如果default无法显示，那么会显示fallback插槽的内容；
-    + ![image-20230416191039041](D:\a-study\study-code\09-vue3+T3\note\img\image-20230416191039041.png)
+    + ![image-20230416191039041](.\img\image-20230416191039041.png)
 
 ## 10.$refs、$parent、$root
 
 + $refs
   + 某些情况下，我们在组件中想要直接获取到元素对象或者子组件实例：在Vue开发中我们是不推荐进行DOM操作的；这个时候，我们可以给元素或者组件绑定一个ref的attribute属性；
   + 组件实例有一个$refs属性：它一个对象Object，持有注册过ref attribute 的所有DOM 元素和组件实例。
-    + ![image-20230416191446302](D:\a-study\study-code\09-vue3+T3\note\img\image-20230416191446302.png)
+    + ![image-20230416191446302](.\img\image-20230416191446302.png)
 + $parent、$root
   + 我们可以通过$parent来访问父元素。
   + 这里我们也可以通过$root来实现，因为App是我们的根组件；
-  + ![image-20230416191524613](D:\a-study\study-code\09-vue3+T3\note\img\image-20230416191524613.png)
+  + ![image-20230416191524613](.\img\image-20230416191524613.png)
 + 注意：在Vue3中已经移除了$children的属性，所以不可以使用了。
 
 ## 11. 生命周期
@@ -1222,31 +1222,31 @@ https://github.com/vuejs/core
   + 通过对生命周期函数的回调，我们可以知道目前组件正在经历什么阶段；
   + 那么我们就可以在该生命周期中编写属于自己的逻辑代码了；
 
-+ <img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230416191803914.png" alt="image-20230416191803914" style="zoom:50%;" /><img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230416191808469.png" alt="image-20230416191808469" style="zoom:50%;" />
++ <img src=".\img\image-20230416191803914.png" alt="image-20230416191803914" style="zoom:50%;" /><img src=".\img\image-20230416191808469.png" alt="image-20230416191808469" style="zoom:50%;" />
 
 ## 12. 组件的v-model
 
 当我们在组件上使用v-model的时候，等价于如下的操作：
 
-![image-20230416191928897](D:\a-study\study-code\09-vue3+T3\note\img\image-20230416191928897.png)
+![image-20230416191928897](.\img\image-20230416191928897.png)
 
 那么，为了我们的MyInput组件可以正常的工作，这个组件内的<input> 必须：
 
 + 将其value attribute 绑定到一个名叫modelValue 的prop 上；
 
 + 其input 事件被触发时，将新的值通过自定义的update:modelValue 事件抛出；
-+ ![image-20230416211831233](D:\a-study\study-code\09-vue3+T3\note\img\image-20230416211831233.png)
-+ ![image-20230416211837202](D:\a-study\study-code\09-vue3+T3\note\img\image-20230416211837202.png)
++ ![image-20230416211831233](.\img\image-20230416211831233.png)
++ ![image-20230416211837202](.\img\image-20230416211837202.png)
 + **通过computed实现**
-  + ![image-20230416212003503](D:\a-study\study-code\09-vue3+T3\note\img\image-20230416212003503.png)
+  + ![image-20230416212003503](.\img\image-20230416212003503.png)
 
 + **绑定多个属性**
   + 如果我们希望绑定更多，可以给v-model传入一个参数，那么这个参数的名称就是我们绑定属性的名称；
-  + ![image-20230416212102110](D:\a-study\study-code\09-vue3+T3\note\img\image-20230416212102110.png)
+  + ![image-20230416212102110](.\img\image-20230416212102110.png)
   + **v-model:title相当于做了两件事：**
     + 绑定了title属性；
     + 监听了@update:title的事件；
-    + ![image-20230416212144893](D:\a-study\study-code\09-vue3+T3\note\img\image-20230416212144893.png)
+    + ![image-20230416212144893](.\img\image-20230416212144893.png)
 
 ## 13.过渡和动画
 
@@ -1258,10 +1258,10 @@ https://github.com/vuejs/core
 
 + Vue 提供了transition 的封装组件，在下列情形中，可以给任何元素和组件添加进入/离开过渡：
   + **条件渲染(使用v-if)条件展示(使用v-show)**
-    + ![image-20230422133441524](D:\a-study\study-code\09-vue3+T3\note\img\image-20230422133441524.png)
-    + ![image-20230422133448500](D:\a-study\study-code\09-vue3+T3\note\img\image-20230422133448500.png)
+    + ![image-20230422133441524](.\img\image-20230422133441524.png)
+    + ![image-20230422133448500](.\img\image-20230422133448500.png)
   + **动态组件**
-    + ![image-20230422182725385](D:\a-study\study-code\09-vue3+T3\note\img\image-20230422182725385.png)
+    + ![image-20230422182725385](.\img\image-20230422182725385.png)
   + **组件根节点**
 + **Transition组件的原理**
   + 当插入或删除包含在transition 组件中的元素时，Vue 将会做以下处理：
@@ -1281,33 +1281,33 @@ https://github.com/vuejs/core
   + v-leave-to：离开过渡的结束状态。在离开过渡被触发之后下一帧生效(与此同时v-leave-from 被删除)，在过渡/动画完成之后移除。
   
 + **class添加的时机和命名规则**
-  + ![image-20230422134832095](D:\a-study\study-code\09-vue3+T3\note\img\image-20230422134832095.png)
+  + ![image-20230422134832095](.\img\image-20230422134832095.png)
     + 如果我们使用的是一个没有name的transition，那么所有的class是以v- 作为默认前缀；
     + 如果我们添加了一个name属性，比如<transtion name="why">，那么所有的class会以why- 开头；
   
 + **通过animation实现动画**
-  + ![image-20230422182223793](D:\a-study\study-code\09-vue3+T3\note\img\image-20230422182223793.png)![image-20230422182227529](D:\a-study\study-code\09-vue3+T3\note\img\image-20230422182227529.png)
+  + ![image-20230422182223793](.\img\image-20230422182223793.png)![image-20230422182227529](.\img\image-20230422182227529.png)
   
 + **同时设置过渡和动画**
   + 如果我们同时使用了过渡和动画，并且在这个情况下可能某一个动画执行结束时，另外一个动画还没有结束；在这种情况下，我们可以设置type 属性为animation 或者transition 来明确的告知Vue监听的类型；
-  + ![image-20230422182357416](D:\a-study\study-code\09-vue3+T3\note\img\image-20230422182357416.png)
+  + ![image-20230422182357416](.\img\image-20230422182357416.png)
   
 + **显示的指定动画时间**
   + 指定过渡的时间，通过duration 属性。duration可以设置两种类型的值：
     + number类型：同时设置进入和离开的过渡时间；
     + object类型：分别设置进入和离开的过渡时间；
-    + ![image-20230422182536550](D:\a-study\study-code\09-vue3+T3\note\img\image-20230422182536550.png)<img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230422182541277.png" alt="image-20230422182541277" style="zoom:50%;" />
+    + ![image-20230422182536550](.\img\image-20230422182536550.png)<img src=".\img\image-20230422182541277.png" alt="image-20230422182541277" style="zoom:50%;" />
 
 + **过渡的模式mode**
-  + 当动画在两个元素之间切换的时候存在的问题：![image-20230422182641493](D:\a-study\study-code\09-vue3+T3\note\img\image-20230422182641493.png)
+  + 当动画在两个元素之间切换的时候存在的问题：![image-20230422182641493](.\img\image-20230422182641493.png)
   + 这是因为默认情况下进入和离开动画是同时发生的；如果我们不希望同时执行进入和离开动画，那么我们需要设置transition的过渡模式：
     + in-out: 新元素先进行过渡，完成之后当前元素过渡离开；
     + out-in: 当前元素先进行过渡，完成之后新元素过渡进入；
-    + <img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230501101909783.png" alt="image-20230501101909783" style="zoom:50%;" />
+    + <img src=".\img\image-20230501101909783.png" alt="image-20230501101909783" style="zoom:50%;" />
   
 + **appear初次渲染**
   + 默认情况下，首次渲染的时候是没有动画的，如果我们希望给他添加上去动画，那么就可以增加另外一个属性appear：
-  + ![image-20230422182834445](D:\a-study\study-code\09-vue3+T3\note\img\image-20230422182834445.png)
+  + ![image-20230422182834445](.\img\image-20230422182834445.png)
 
 + **animate.css库的使用**
 
@@ -1315,9 +1315,9 @@ https://github.com/vuejs/core
   + 在main.js中导入animate.css：
   + 用法：
     + 用法一：直接使用animate库中定义的keyframes 动画；
-      + ![image-20230501105039101](D:\a-study\study-code\09-vue3+T3\note\img\image-20230501105039101.png)
+      + ![image-20230501105039101](.\img\image-20230501105039101.png)
     + 用法二：直接使用animate库提供给我们的类；
-      + ![image-20230501105050896](D:\a-study\study-code\09-vue3+T3\note\img\image-20230501105050896.png)
+      + ![image-20230501105050896](.\img\image-20230501105050896.png)
 
 + **gsap库**
 
@@ -1327,17 +1327,17 @@ https://github.com/vuejs/core
 
   + transition组件提供的JavaScript钩子
 
-    + <img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230501224302147.png" alt="image-20230501224302147" style="zoom:50%;" /><img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230501224320363.png" alt="image-20230501224320363" style="zoom:50%;" /><img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230501224326145.png" alt="image-20230501224326145" style="zoom:50%;" />
+    + <img src=".\img\image-20230501224302147.png" alt="image-20230501224302147" style="zoom:50%;" /><img src=".\img\image-20230501224320363.png" alt="image-20230501224320363" style="zoom:50%;" /><img src=".\img\image-20230501224326145.png" alt="image-20230501224326145" style="zoom:50%;" />
 
     + 当我们使用JavaScript来执行过渡动画时，需要进行done 回调，否则它们将会被同步调用，过渡会立即完成。
     + 添加**:css="false"，也会让Vue 会跳过CSS 的检测**，除了**性能略高**之外，这可以避免过渡过程中CSS 规则的影响。
 
   + gsap库的使用
 
-    + ![image-20230501224530269](D:\a-study\study-code\09-vue3+T3\note\img\image-20230501224530269.png)![image-20230501224534681](D:\a-study\study-code\09-vue3+T3\note\img\image-20230501224534681.png)
+    + ![image-20230501224530269](.\img\image-20230501224530269.png)![image-20230501224534681](.\img\image-20230501224534681.png)
     + **gsap实现数字变化**
-      + ![image-20230501224612576](D:\a-study\study-code\09-vue3+T3\note\img\image-20230501224612576.png)
-      + ![image-20230501224617630](D:\a-study\study-code\09-vue3+T3\note\img\image-20230501224617630.png)
+      + ![image-20230501224612576](.\img\image-20230501224612576.png)
+      + ![image-20230501224617630](.\img\image-20230501224617630.png)
 
 + **列表的过渡**
 
@@ -1495,7 +1495,7 @@ https://github.com/vuejs/core
 + 一个Mixin对象可以包含**任何组件选项；**
 + 当组件使用Mixin对象时，所有**Mixin对象的选项将被混合进入该组件本身的选项**中；
 
-![image-20230502103912041](D:\a-study\study-code\09-vue3+T3\note\img\image-20230502103912041.png)
+![image-20230502103912041](.\img\image-20230502103912041.png)
 
 + **Mixin的合并规则**
   + 情况一：如果是data函数的返回值对象
@@ -1510,13 +1510,13 @@ https://github.com/vuejs/core
   + 如果组件中的某些选项，是所有的组件都需要拥有的，那么这个时候我们可以使用全局的mixin：
     + 全局的Mixin可以使用应用app的方法mixin 来完成注册；
     + 一旦注册，那么全局混入的选项将会影响每一个组件；
-  + ![image-20230502104453070](D:\a-study\study-code\09-vue3+T3\note\img\image-20230502104453070.png)
+  + ![image-20230502104453070](.\img\image-20230502104453070.png)
 
 ### 14.2 extends
 
 允许声明扩展另外一个组件，类似于Mixins；
 
-![image-20230502104545257](D:\a-study\study-code\09-vue3+T3\note\img\image-20230502104545257.png)
+![image-20230502104545257](.\img\image-20230502104545257.png)
 
 ## 15. Composition API
 
@@ -1556,19 +1556,19 @@ https://github.com/vuejs/core
 
   + setup的返回值可以**在模板template**中被使用；也就是说我们可以通过setup的返回值来**替代data选项**；甚至是我们可以**返回一个执行函数**来代替在methods中定义的方法：
 
-    + ![image-20230502105929497](D:\a-study\study-code\09-vue3+T3\note\img\image-20230502105929497.png)![image-20230502105934508](D:\a-study\study-code\09-vue3+T3\note\img\image-20230502105934508.png)
+    + ![image-20230502105929497](.\img\image-20230502105929497.png)![image-20230502105934508](.\img\image-20230502105934508.png)
 
     + 将counter 在increment 或者decrement进行操作时，是不能实现界面的响应式的。因为对于一个定义的变量来说，默认情况下，Vue并不会跟踪它的变化，来引起界面的响应式操作；可通过**Reactive API、Ref API**
 + **在setup中使用ref获取元素或者组件**
   + 只需要定义一个ref对象，绑定到元素或者组件的ref属性上即可；
-  + ![image-20230503115648341](D:\a-study\study-code\09-vue3+T3\note\img\image-20230503115648341.png)
+  + ![image-20230503115648341](.\img\image-20230503115648341.png)
 
 
 ### 15.3 reactive API
 
 如果想为在setup中定义的数据提供响应式的特性，那么我们可以使用reactive的函数：
 
-![image-20230502110904378](D:\a-study\study-code\09-vue3+T3\note\img\image-20230502110904378.png)
+![image-20230502110904378](.\img\image-20230502110904378.png)
 
 + 这是因为当我们使用reactive函数处理我们的数据之后，数据再次被使用时就会进行依赖收集；
 + 当数据发生改变时，所有收集到的依赖都是进行对应的响应式操作（比如更新界面）；
@@ -1580,13 +1580,13 @@ https://github.com/vuejs/core
 
 + ref 会返回一个可变的响应式对象，该对象作为一个响应式的引用维护着它内部的值，这就是ref名称的来源；
 + 它内部的值是在ref的value 属性中被维护的；
-+ ![image-20230502111112012](D:\a-study\study-code\09-vue3+T3\note\img\image-20230502111112012.png)
++ ![image-20230502111112012](.\img\image-20230502111112012.png)
 + **注意：**
   + 在**模板中引入ref的值时**，Vue会自动帮助我们进行解包操作，所以我们并不需要在模板中**通过ref.value** 的方式来使用；
     + 模板中的解包是**浅层的解包**，如果我们的代码是下面的方式：
-    + <img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230502111313311.png" alt="image-20230502111313311" style="zoom:50%;" />
+    + <img src=".\img\image-20230502111313311.png" alt="image-20230502111313311" style="zoom:50%;" />
     + 如果我们将ref放到一个reactive的属性当中，那么在模板中使用时，它会自动解包：
-      + <img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230502111325881.png" alt="image-20230502111325881" style="zoom:50%;" />
+      + <img src=".\img\image-20230502111325881.png" alt="image-20230502111325881" style="zoom:50%;" />
   + 但是**在setup 函数内部，**它依然是一个ref引用， 所以对其进行操作时，我们**依然需要使用ref.value的方式；**
 
 #### 15.4.1 ref其他的API
@@ -1601,7 +1601,7 @@ https://github.com/vuejs/core
   + 创建一个浅层的ref对象；
 + **triggerRef**
   + 手动触发和shallowRef 相关联的副作用：
-  + ![image-20230503103217773](D:\a-study\study-code\09-vue3+T3\note\img\image-20230503103217773.png)
+  + ![image-20230503103217773](.\img\image-20230503103217773.png)
 
 ### 15.5 readonly
 
@@ -1618,21 +1618,21 @@ https://github.com/vuejs/core
     + 当obj被修改时，readonly返回的info对象也会被修改；
     + 但是我们不能去修改readonly返回的对象info；
   + 其实本质上就是readonly返回的对象的setter方法被劫持了而已；
-  + <img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230502111711271.png" alt="image-20230502111711271" style="zoom:50%;" />
-  + <img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230502111805481.png" alt="image-20230502111805481" style="zoom:50%;" /><img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230502111821622.png" alt="image-20230502111821622" style="zoom:50%;" />
+  + <img src=".\img\image-20230502111711271.png" alt="image-20230502111711271" style="zoom:50%;" />
+  + <img src=".\img\image-20230502111805481.png" alt="image-20230502111805481" style="zoom:50%;" /><img src=".\img\image-20230502111821622.png" alt="image-20230502111821622" style="zoom:50%;" />
 
 ### 15.6 toRefs和toRef
 
-​	如果我们使用ES6的解构语法，对reactive返回的对象进行解构获取值，那么之后无论是修改结构后的变量，还是修改reactive返回的state对象，数据都不再是响应式的：<img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230503102704551.png" alt="image-20230503102704551" style="zoom:50%;" />
+​	如果我们使用ES6的解构语法，对reactive返回的对象进行解构获取值，那么之后无论是修改结构后的变量，还是修改reactive返回的state对象，数据都不再是响应式的：<img src=".\img\image-20230503102704551.png" alt="image-20230503102704551" style="zoom:50%;" />
 
 + **toRefs的函数，可以将reactive返回的对象中的属性都转成ref；**
 
-​	![image-20230503102759888](D:\a-study\study-code\09-vue3+T3\note\img\image-20230503102759888.png)
+​	![image-20230503102759888](.\img\image-20230503102759888.png)
 
 ​	这种做法相当于已经在state.name和ref.value之间建立了链接，任何一个修改都会引起另外一个变化；
 
 + 如果只希望转换一个reactive对象中的属性为ref, 那么可以使用toRef的方法：
-  + ![image-20230503102918592](D:\a-study\study-code\09-vue3+T3\note\img\image-20230503102918592.png)
+  + ![image-20230503102918592](.\img\image-20230503102918592.png)
 
 ### 15.7 customRef
 
@@ -1641,7 +1641,7 @@ https://github.com/vuejs/core
     + 一般来说，`track()` 应该在 `get()` 方法中调用，而 `trigger()` 应该在 `set()` 中调用。对何时调用、是否应该调用他们有完全的控制权。
   + 并且应该返回一个带有get 和set 的对象；
 + 案例：对双向绑定的属性进行debounce(节流)的操作；
-  + ![image-20230503112225540](D:\a-study\study-code\09-vue3+T3\note\img\image-20230503112225540.png)
+  + ![image-20230503112225540](.\img\image-20230503112225540.png)
 
 ### 15.8 Reactive判断的API
 
@@ -1664,9 +1664,9 @@ https://github.com/vuejs/core
 
 + 使用
   + 方式一：接收一个getter函数，并为getter 函数返回的值，返回一个不变的ref 对象；
-    + ![image-20230503112403663](D:\a-study\study-code\09-vue3+T3\note\img\image-20230503112403663.png)
+    + ![image-20230503112403663](.\img\image-20230503112403663.png)
   + 方式二：接收一个具有get 和set 的对象，返回一个可变的（可读写）ref 对象；
-    + ![image-20230503112421788](D:\a-study\study-code\09-vue3+T3\note\img\image-20230503112421788.png)
+    + ![image-20230503112421788](.\img\image-20230503112421788.png)
 
 ### 15.10 侦听数据的变化 watchEffect、watch
 
@@ -1677,24 +1677,24 @@ https://github.com/vuejs/core
 + 当**侦听到某些响应式数据变化时**，我们希望执行某些操作，这个时候可以**使用watchEffect**。
   + 首先，watchEffect传入的函数会被立即执行一次，并且在执行的过程中会收集依赖；
   + 其次，只有收集的依赖发生变化时，watchEffect传入的函数才会再次执行；
-    + <img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230503115140782.png" alt="image-20230503115140782" style="zoom:50%;" />
+    + <img src=".\img\image-20230503115140782.png" alt="image-20230503115140782" style="zoom:50%;" />
 + 如果在发生某些情况下，我们希望**停止侦听**，这个时候我们可以获取watchEffect的返回值函数，调用该函数即可。
   + 比如在上面的案例中，我们age达到20的时候就停止侦听：
-  + ![image-20230503115239950](D:\a-study\study-code\09-vue3+T3\note\img\image-20230503115239950.png)
+  + ![image-20230503115239950](.\img\image-20230503115239950.png)
 + **watchEffect清除副作用**
   + 比如在开发中我们需要在侦听函数中执行网络请求，但是在网络请求还没有达到的时候，我们停止了侦听器，或者侦听器侦听函数被再次执行了。那么上一次的网络请求应该被取消掉，这个时候我们就可以清除上一次的副作用；
   + 在我们给watchEffect传入的函数被回调时，其实可以获取到一个参数：**onInvalidate**
     + 当副作用即将重新执行或者侦听器被停止时会执行该函数传入的回调函数；
     + 我们可以在传入的回调函数中，执行一些清楚工作；
-  + ![image-20230503115445415](D:\a-study\study-code\09-vue3+T3\note\img\image-20230503115445415.png)
+  + ![image-20230503115445415](.\img\image-20230503115445415.png)
 + **watchEffect的执行时机**
   + 默认情况下，组件的更新会在副作用函数执行之前：
-    + ![image-20230503115812160](D:\a-study\study-code\09-vue3+T3\note\img\image-20230503115812160.png)![image-20230503115817043](D:\a-study\study-code\09-vue3+T3\note\img\image-20230503115817043.png)
+    + ![image-20230503115812160](.\img\image-20230503115812160.png)![image-20230503115817043](.\img\image-20230503115817043.png)
     + 发现打印结果打印了两次：
       + 这是因为setup函数在执行时就会立即执行传入的副作用函数，这个时候DOM并没有挂载，所以打印为null；
       + 而当DOM挂载时，会给title的ref对象赋值新的值，副作用函数会再次执行，打印出来对应的元素；
   + **改变副作用函数的执行时机：它的默认值是pre**，它会在元素挂载或者更新之前执行；
-    + ![image-20230503115938477](D:\a-study\study-code\09-vue3+T3\note\img\image-20230503115938477.png)
+    + ![image-20230503115938477](.\img\image-20230503115938477.png)
     + flush 选项还接受sync，这将强制效果始终同步触发。然而，这是低效的，应该很少需要。
 
 #### 15.10.2 watch
@@ -1712,24 +1712,24 @@ https://github.com/vuejs/core
   + watch侦听函数的数据源有两种类型：
     + 一个**getter函数**：但是该getter函数**必须引用可响应式的对象**（比如reactive或者ref）；
     + 直接写入一个**可响应式的对象**，reactive或者ref（比较常用的是ref）；
-    + <img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230503122339152.png" alt="image-20230503122339152" style="zoom:50%;" /><img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230503122342717.png" alt="image-20230503122342717" style="zoom:50%;" />
+    + <img src=".\img\image-20230503122339152.png" alt="image-20230503122339152" style="zoom:50%;" /><img src=".\img\image-20230503122342717.png" alt="image-20230503122342717" style="zoom:50%;" />
 + **侦听多个数据源**
-  + ![image-20230503122428883](D:\a-study\study-code\09-vue3+T3\note\img\image-20230503122428883.png)
+  + ![image-20230503122428883](.\img\image-20230503122428883.png)
 + **侦听响应式对象**
   + 如果我们希望侦听一个数组或者对象，那么可以使用一个getter函数，并且对可响应对象进行解构：
-  + ![image-20230503122455461](D:\a-study\study-code\09-vue3+T3\note\img\image-20230503122455461.png)
+  + ![image-20230503122455461](.\img\image-20230503122455461.png)
 + **watch的选项** （新旧值会一样）
   + 如果我们希望侦听一个**深层的侦听**，那么依然需要设置**deep 为true**：
   + 也可以传入**immediate** 立即执行；
-  + ![image-20230503122537345](D:\a-study\study-code\09-vue3+T3\note\img\image-20230503122537345.png)
+  + ![image-20230503122537345](.\img\image-20230503122537345.png)
 
 ### 15.11 生命周期钩子
 
 ​	**可以使用直接导入的onX 函数注册生命周期钩子；**
 
-![image-20230503165202466](D:\a-study\study-code\09-vue3+T3\note\img\image-20230503165202466.png)![image-20230503165205921](D:\a-study\study-code\09-vue3+T3\note\img\image-20230503165205921.png)
+![image-20230503165202466](.\img\image-20230503165202466.png)![image-20230503165205921](.\img\image-20230503165205921.png)
 
-![image-20230503165218383](D:\a-study\study-code\09-vue3+T3\note\img\image-20230503165218383.png)
+![image-20230503165218383](.\img\image-20230503165218383.png)
 
 ### 15.12 Provide函数、inject函数 
 
@@ -1737,20 +1737,20 @@ https://github.com/vuejs/core
   + provide可以传入两个参数：
     + name：提供的属性名称；
     + value：提供的属性值；
-  + ![image-20230503165327876](D:\a-study\study-code\09-vue3+T3\note\img\image-20230503165327876.png)
+  + ![image-20230503165327876](.\img\image-20230503165327876.png)
 
 + 在后代组件中可以通过**inject** 来注入需要的属性和对应的值：
   + 可以通过inject 来注入需要的内容；
   + inject可以传入两个参数：
     + 要inject 的property 的name；
     + 默认值；
-  + ![image-20230503165432354](D:\a-study\study-code\09-vue3+T3\note\img\image-20230503165432354.png)
+  + ![image-20230503165432354](.\img\image-20230503165432354.png)
 + 为了增加provide 值和inject 值之间的**响应性**，我们可以在provide 值时使用ref 和reactive。
-  + ![image-20230503165519707](D:\a-study\study-code\09-vue3+T3\note\img\image-20230503165519707.png)
+  + ![image-20230503165519707](.\img\image-20230503165519707.png)
 + **修改响应式Property**
   + 如果我们需要修改可响应的数据，那么最好是在数据提供的位置来修改：
   + 我们可以将修改方法进行共享，在后代组件中进行调用；
-  + ![image-20230503165602818](D:\a-study\study-code\09-vue3+T3\note\img\image-20230503165602818.png)
+  + ![image-20230503165602818](.\img\image-20230503165602818.png)
 
 ## 16. h函数
 
@@ -1768,11 +1768,11 @@ https://github.com/vuejs/core
   + 其实更准备的命名是createVNode() 函数，但是为了简便，Vue将之简化为h() 函数；
   + **接受三个参数：**
     + 第一个参数：
-      + ![image-20230503180205037](D:\a-study\study-code\09-vue3+T3\note\img\image-20230503180205037.png)
+      + ![image-20230503180205037](.\img\image-20230503180205037.png)
     + 第二个参数：
-      + ![image-20230503180222339](D:\a-study\study-code\09-vue3+T3\note\img\image-20230503180222339.png)
+      + ![image-20230503180222339](.\img\image-20230503180222339.png)
     + 第三个参数：
-      + ![image-20230503180232296](D:\a-study\study-code\09-vue3+T3\note\img\image-20230503180232296.png)
+      + ![image-20230503180232296](.\img\image-20230503180232296.png)
   + **注意事项：**
     + 如果没有props，那么通常可以将children作为第二个参数传入；
     + 如果会产生歧义，可以将null作为第二个参数传入，将children作为第三个参数传入；
@@ -1780,13 +1780,13 @@ https://github.com/vuejs/core
     + h函数可以在两个地方使用：
       + render函数选项中；
       + setup函数选项中（setup本身需要是一个函数类型，函数再返回h函数创建的VNode）；
-      + <img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230503180445080.png" alt="image-20230503180445080" style="zoom:50%;" />
-      + <img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230503180451485.png" alt="image-20230503180451485" style="zoom:50%;" />
+      + <img src=".\img\image-20230503180445080.png" alt="image-20230503180445080" style="zoom:50%;" />
+      + <img src=".\img\image-20230503180451485.png" alt="image-20230503180451485" style="zoom:50%;" />
   + **h函数计数器案例**
-    + <img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230503180509250.png" alt="image-20230503180509250" style="zoom:50%;" />
+    + <img src=".\img\image-20230503180509250.png" alt="image-20230503180509250" style="zoom:50%;" />
 
   + **函数组件和插槽的使用**
-    + <img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230503180550200.png" alt="image-20230503180550200" style="zoom:50%;" /><img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230503180554454.png" alt="image-20230503180554454" style="zoom:50%;" />
+    + <img src=".\img\image-20230503180550200.png" alt="image-20230503180550200" style="zoom:50%;" /><img src=".\img\image-20230503180554454.png" alt="image-20230503180554454" style="zoom:50%;" />
 
   
 
@@ -1799,7 +1799,7 @@ https://github.com/vuejs/core
   + **安装Babel支持Vue的jsx插件：**
     + `npm install @vue/babel-plugin-jsx -D`
   + **在babel.config.js配置文件中配置插件：**
-    + ![image-20230503190148263](D:\a-study\study-code\09-vue3+T3\note\img\image-20230503190148263.png)![image-20230503190759545](D:\a-study\study-code\09-vue3+T3\note\img\image-20230503190759545.png)
+    + ![image-20230503190148263](.\img\image-20230503190148263.png)![image-20230503190759545](.\img\image-20230503190759545.png)
 
 ## 18.自定义组件
 
@@ -1810,14 +1810,14 @@ https://github.com/vuejs/core
   + **自定义全局指令**：app的directive 方法，可以在任意组件中被使用；
 + **案例：**当某个元素挂载完成后可以自定获取焦点
   + 实现方式一：聚焦的默认实现
-    + <img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230503210209242.png" alt="image-20230503210209242" style="zoom:50%;" />
+    + <img src=".\img\image-20230503210209242.png" alt="image-20230503210209242" style="zoom:50%;" />
   + 实现方式二：局部自定义指令
     + 在组件选项中使用directives 即可；
     + **它是一个对象**，在对象中编写我们自定义指令的名称（注意：这里不需要加v-）；
     + 自定义指令**有一个生命周期**，是**在组件挂载后调用的mounted**，我们可以在其中完成操作；
-    + <img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230503210317231.png" alt="image-20230503210317231" style="zoom:50%;" />
+    + <img src=".\img\image-20230503210317231.png" alt="image-20230503210317231" style="zoom:50%;" />
   + 方式三：自定义全局指令
-    + <img src="D:\a-study\study-code\09-vue3+T3\note\img\image-20230503210333209.png" alt="image-20230503210333209" style="zoom:67%;" />
+    + <img src=".\img\image-20230503210333209.png" alt="image-20230503210333209" style="zoom:67%;" />
 + **指令的生命周期**
   + 一个指令定义的对象，Vue提供了如下的几个钩子函数：
     + created：在绑定元素的attribute 或事件监听器被应用之前调用；
@@ -1828,9 +1828,10 @@ https://github.com/vuejs/core
     + beforeUnmount：在卸载绑定元素的父组件之前调用；
     + unmounted：当指令与元素解除绑定且父组件已卸载时，只调用一次；
 + **指令的参数和修饰符**
-  + ![image-20230503210557163](D:\a-study\study-code\09-vue3+T3\note\img\image-20230503210557163.png)
+  + ![image-20230503210557163](.\img\image-20230503210557163.png)
     + info是参数的名称；
     + aaa-bbb是修饰符的名称；
     + 后面是传入的具体的值；
     + 在我们的生命周期中，我们可以通过**bindings** 获取到对应的内容：
-    + ![image-20230503210632422](D:\a-study\study-code\09-vue3+T3\note\img\image-20230503210632422.png)
+    + ![image-20230503210632422](.\img\image-20230503210632422.png)
+
