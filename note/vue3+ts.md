@@ -59,7 +59,7 @@
 + 更快、更可靠地将音乐、图片、视频、应用程序及其他文件发送给用户；
 + 来提供高性能、可扩展性及低成本的网络内容传递给用户； 
 
-![](D:\a-study\study-code\09-vue3+T3\note\img\image-20230317214130971.png)
+![](https://github.com/ElIaukEux/vue3-study/blob/master/note/img/image-20230317214130971.png)
 
 **常用的CDN服务器可以大致分为两种**
 
