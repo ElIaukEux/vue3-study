@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		table ,th,tr,td{
+			border: 1px solid black;
+			text-align: center;
+			border-collapse: collapse;
+		}
+		th,td {
+			padding: 8px 16px ;
+			text-align: left;
+		}
+	</style>
+</head>
+<body>
+	<div id="App"></div>
+	<template id="my-app">
+		<template v-if="books.length >0">
+			<table>
+				<thead>
+					<th></th>
+					<th>书籍名称</th>
+					<th>出版日期</th>
+					<th>价格</th>
+					<th>购买数量</th>
+					<th>操作</th>
+				</thead>
+				<tbody>
+						<tr v-for="(item,index) in filterBooks" :keys="index">
+							<td>{{index+1}}</td>
+							<td>{{item.bookName}}</td>
+							<td>{{item.publishTime}}</td>
+							<td>{{item.jiage}}</td>
+							<td>
+								<button :disabled="item.bugNum <= 1" @click="subFn(index)">-</button>
+								<span style="margin:5px">{{item.bugNum}}</span>
+								<button @click="addFun(index)">+</button>
+							</td>
+							<td>
+								<button @click="removeFun(index)">删除</button>
+							</td>
+						</tr>
+				</tbody>
+			</table>
+			<p>总价￥{{total}}</p>
+		</template>
+		<template v-else>
+			<h2>购物车为空</h2>
+		</template>
+	</template>
+	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+	<script>
+		Vue.createApp({
+			template: '#my-app',
+			data() {
+				return {
+					books: [
+						{
+							bookName:'算法导论',
+							publishTime:'2022-10-09',
+							jiage:20,
+							bugNum:1
+						},{
+							bookName:'java高级程序设计',
+							publishTime:'2022-04-13',
+							jiage:67,
+							bugNum:1
+						},{
+							bookName:'你不知道的javascript',
+							publishTime:'2011-10-09',
+							jiage:40,
+							bugNum:1
+						},{
+							bookName:'代码大全',
+							publishTime:'2018-11-09',
+							jiage:20,
+							bugNum:1
+						}
+					]
+				};
+			},
+			computed: {
+				total() {
+					let finalPrice = 0
+					for(var i = 0; i<this.books.length;i++) {
+						finalPrice += this.books[i].bugNum *this.books[i].jiage
+					}
+					return finalPrice;
+				},
+				filterBooks() {
+					return this.books.map(item => {
+						const newItem = Object.assign({},item);
+						newItem.jiage = '￥'+item.jiage
+						return newItem
+					});
+				}
+			},
+			methods: {
+				subFn(index) {
+					this.books[index].bugNum--
+				},
+				addFun(index) {
+					this.books[index].bugNum++
+				},
+				removeFun(index) {
+					this.books.splice(index,1)
+				}
+			},
+		}).mount('#App')
+	</script>
+</body>
+</html>
