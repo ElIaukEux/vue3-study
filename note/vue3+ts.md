@@ -487,9 +487,9 @@ https://github.com/vuejs/core
 
 ​	::one:**vue3官方的解释：**
 
-	+ key属性主要用在Vue的**虚拟DOM算法**，在**新旧nodes**对比时辨识**VNodes**； 
-	+ 如果**不使用key**，Vue会使用一种最大限度减少动态元素并且尽可能的尝试就地**修改/复用相同类型元素**的算法
-	+ 而**使用key**时，它会基于key的变化**重新排列元素顺序**，并且会**移除/销毁key**不存在的元素；
++ key属性主要用在Vue的**虚拟DOM算法**，在**新旧nodes**对比时辨识**VNodes**； 
++ 如果**不使用key**，Vue会使用一种最大限度减少动态元素并且尽可能的尝试就地**修改/复用相同类型元素**的算法
++ 而**使用key**时，它会基于key的变化**重新排列元素顺序**，并且会**移除/销毁key**不存在的元素；
 
 ​	::two:**vnode概念**---> 虚拟节点
 
@@ -524,18 +524,18 @@ https://github.com/vuejs/core
   + **从头开始遍历（while），比较新旧节点是否相同（节点类型相同，并且key相同）**
     + 相同则，继续遍历执行patch操作
     + 不同则，跳出循环
-    + ![image-20230319115223251](.\img\image-20230319115223251.png)
-      + **从尾部开始遍历**
-        + 相同则继续遍历
-        + 不同则跳出循环
-        + ![image-20230319115244315](.\img\image-20230319115244315.png)
+    + <img src='.\img\image-20230319115223251.png'/>
+    + **从尾部开始遍历**
+      + 相同则继续遍历
+      + 不同则跳出循环
+      + <img src = '.\img\image-20230319115244315.png'/>
     + **如果旧节点遍历完了，依然有新的节点，那么就创建新的节点并进行添加** 
-      + ![image-20230319115314013](.\img\image-20230319115314013.png)
+      + <img src='.\img\image-20230319115314013.png'/>
   +  **如果新的节点遍历完毕，但是依然有旧的节点，那么就移除旧节点**
-    + ![image-20230319115353607](.\img\image-20230319115353607.png)
+    + <img src='.\img\image-20230319115353607.png'/>
 
   + **特殊的情况，中间还有很多未知的或者乱序的节点：**
-    + ![image-20230319115619405](.\img\image-20230319115619405.png)
+    + <img src='.\img\image-20230319115619405.png'/>
 
 <img src=".\img\image-20230319110542040.png" alt="image-20230319110542040" style="zoom:50%;" />
 
@@ -682,16 +682,14 @@ https://github.com/vuejs/core
 **深度监听**  watch在侦听对象时，如果只是内部某个属性发生改变，则不会做出响应，就可以使用深度监听
 
 + **监听属性的值为对象**--> handler 监听函数，**deep是否深度监听**，immediate页面一进来就会立即监听。 
-  + ![image-20230319183054468](.\img\image-20230319183054468.png)
+  + <img src='.\img\image-20230319183054468.png'>
   + 其中newValue,oldValue为引用对象类型时，所以指向的是同一个对象，所以打印出来结果一致。
 
 + **监听属性的值为字符串**  可以将该字符串对应的方法写在methods中进行调用
-  + ![image-20230319184435396](.\img\image-20230319184435396.png)
-
+  + <img src='.\img\image-20230319184435396.png'/>
 + **监听属性的值为数组时** 如果监听时有多个函数要执行，则可以使用数组，它们会逐一调用
 
   + <img src=".\img\image-20230319184714037.png" alt="image-20230319184714037" style="zoom:50%;" />
-
 + **其他写法**
 
   + ![image-20230319185815401](D:/a-study/study-code/09-vue3+T3/note/image-20230319185815401.png)
@@ -700,11 +698,11 @@ https://github.com/vuejs/core
     + 第一个参数是要侦听的源；
     + 第二个参数是侦听的回调函数callback；
     + 第三个参数是额外的其他选项，比如deep、immediate；
-    + ![image-20230319190641620](.\img\image-20230319190641620.png)
+    + <img src='.\img\image-20230319190641620.png'/>
 
 **综合案例--书籍**
 
-![image-20230319191547950](.\img\image-20230319191547950.png)
+<img src='.\img\image-20230319191547950.png'/>
 
 ```js
 <!DOCTYPE html>
@@ -830,7 +828,7 @@ https://github.com/vuejs/core
 
 + 通过创建一个组件，把data中数据的每一项传递过去，然后在组件中监听props中父组件传递过来的值即 可
 
-![image-20230319202814001](.\img\image-20230319202814001.png)
+<img src='.\img\image-20230319202814001.png'/>
 
 ### 7.7 v-model
 
@@ -847,45 +845,45 @@ https://github.com/vuejs/core
 + 它会根据控件类型自动选取正确的方法来更新元素；
 + 尽管有些神奇，**但v-model本质上不过是语法糖**，它**负责监听用户的输入事件来更新数据**，并在某种极端场景下进行一些特殊处理；
 
-![image-20230319224535679](.\img\image-20230319224535679.png)
+<img src='.\img\image-20230319224535679.png'/>
 
 #### v-model原理
 
 + v-bind绑定value属性的值；
 + v-on绑定input事件监听到函数中，函数会获取最新的值赋值到绑定的属性中；
-+ ![image-20230319224630308](.\img\image-20230319224630308.png)
++ <img src='.\img\image-20230319224630308.png'/>
 
 #### v-model绑定textarea
 
-![image-20230319230115326](.\img\image-20230319230115326.png)
+<img src='.\img\image-20230319230115326.png'/>
 
 #### v-model绑定checkbox
 
 + **单个勾选框**
   + v-model即为布尔值。
   + 此时input的value：并不影响v-model的值。
-  + ![image-20230319230213380](.\img\image-20230319230213380.png)
+  + <img src='.\img\image-20230319230213380.png'/>
 + **多个复选框**
   + 当是多个复选框时，因为可以选中多个，所以对应的data中属性是一个数组
   + 当选中某一个时，就会将**input的value**添加到数组中
-  + ![image-20230319230322611](.\img\image-20230319230322611.png)
+  + <img src='.\img\image-20230319230322611.png'/>
 
 #### v-model绑定radio
 
 ​	**用于选择其中一项；**
 
-​	![image-20230319230358180](.\img\image-20230319230358180.png)
+​	<img src='.\img\image-20230319230358180.png'/>
 
 #### v-model绑定select
 
 + **单选**
   + v-model绑定的是一个值；
   +  当我们选中option中的一个时，会将它对应的value赋值到fruit中；
-  + ![image-20230319230458582](.\img\image-20230319230458582.png)
+  + <img src='.\img\image-20230319230458582.png'/>
 + 多选
   + v-model绑定的是一个数组；
   + 当选中多个值时，就会将选中的option对应的value添加到数组fruit中；
-  + ![image-20230319230549087](.\img\image-20230319230549087.png)
+  + <img src='.\img\image-20230319230549087.png'/>
 
 #### v-model值绑定
 
@@ -903,20 +901,20 @@ https://github.com/vuejs/core
     的属性进行同步；
   + 如果我们在v-model后跟上lazy修饰符，**那么会将绑定的事件切换为change 事件**，只有在提交时（比如回车）
     才会触发；
-  + ![image-20230319233022606](.\img\image-20230319233022606.png)
+  + <img src='.\img\image-20230319233022606.png'/>
 
 + **number**
   + message总是**string类型**，即使在我们设置**type为number也是string类型**；
   + 如果我们希望转换为**数字类型**，那么可以使用**.number** 修饰符：
   + 另外，在我们进行逻辑判断时，如果是一个string类型，在可以转化的情况下会进行隐式转换的：
     + 下面的score在进行判断的过程中会**进行隐式转化**的；
-    + ![image-20230319233405124](.\img\image-20230319233405124.png)
+    + <img src='.\img\image-20230319233405124.png'/>
 
 + **trim**
 
   + 如果要自动过滤用户输入的首尾空白字符，可以给v-model添加trim 修饰符：
 
-  + ![image-20230319233859746](.\img\image-20230319233859746.png)
+  + <img src='.\img\image-20230319233859746.png'/>
 
 ## 8.vue组件化
 
@@ -963,7 +961,7 @@ https://github.com/vuejs/core
 
 ### 8.3 组件的通信
 
-![image-20230416172733920](.\img\image-20230416172733920.png)
+<img src='.\img\image-20230416172733920.png'/>
 
 #### 8.3.1 父组件传递给子组件
 
@@ -973,9 +971,9 @@ https://github.com/vuejs/core
 + 父组件给这些attribute赋值，子组件通过attribute的名称获取到对应的值；
   + **Props有两种常见的写法：**
     + 方式一：字符串数组，数组中的字符串就是attribute的名称；
-      + ![image-20230416173019803](.\img\image-20230416173019803.png)
+      + <img src='.\img\image-20230416173019803.png'/>
     + 方式二：对象类型，对象类型我们可以在指定attribute名称的同时，指定它需要传递的类型、是否是必须的、默认值等等；
-      + ![image-20230416173053097](.\img\image-20230416173053097.png)
+      + <img src='.\img\image-20230416173053097.png'/>
       + type的类型
         + String
         + Number
@@ -986,28 +984,28 @@ https://github.com/vuejs/core
         + Function
         + Symbol
       + 对象类型的其他写法
-        + ![image-20230416173203171](.\img\image-20230416173203171.png)
-        + ![image-20230416173209817](.\img\image-20230416173209817.png)
+        + <img src='.\img\image-20230416173203171.png'/>
+        + <img src='.\img\image-20230416173209817.png'/>
       + Prop 的大小写命名
         + HTML 中的attribute 名是大小写不敏感的，所以浏览器会把所有大写字符解释为小写字符；
         + 这意味着当你使用DOM 中的模板时，camelCase (驼峰命名法) 的prop 名需要使用其等价的kebab-case (短
           横线分隔命名) 命名；
-        + ![image-20230416173328518](.\img\image-20230416173328518.png)
+        + <img src='.\img\image-20230416173328518.png'/>
 
 **非Prop的Attribute**
 
 ​	当我们传递给一个组件某个属性，但是该属性并没有定义对应的props或者emits时，就称之为非Prop的Attribute；常见的包括class、style、id属性等；
 
 + Attribute继承：当组件有单个根节点时，非Prop的Attribute将自动添加到根节点的Attribute中：
-+ ![image-20230416173623455](.\img\image-20230416173623455.png)
++ <img src='.\img\image-20230416173623455.png'/>
 + **禁用Attribute继承和多根节点**
   + 如果我们不希望组件的根元素继承attribute，可以在组件中设置inheritAttrs: false：
     + 禁用attribute继承的常见情况是需要将attribute应用于根元素之外的其他元素；
     + 可以通过$attrs来访问所有的非props的attribute；
-    + ![image-20230416173752155](.\img\image-20230416173752155.png)
+    + <img src='.\img\image-20230416173752155.png'/>
   + **多个根节点的attribute**
     + 多个根节点的attribute如果没有显示的绑定，那么会报警告，我们必须手动的指定要绑定到哪一个属性上：
-    + ![image-20230416173835014](.\img\image-20230416173835014.png)
+    + <img src='.\img\image-20230416173835014.png'/>
 
 #### 8.3.2 子组件传递给父组件
 
@@ -1019,11 +1017,11 @@ https://github.com/vuejs/core
 ​	
 
 + 传参
-  + ![image-20230416175125832](.\img\image-20230416175125832.png)
+  + <img src='.\img\image-20230416175125832.png'/>
 
 
 
-+ 验证参数![image-20230416175215618](.\img\image-20230416175215618.png)
++ 验证参数<img src='.\img\image-20230416175215618.png'/>
 
 #### 8.3.3 非父子组件的通信
 
@@ -1031,14 +1029,15 @@ https://github.com/vuejs/core
 
   + 比如有一些深度嵌套的组件，子组件想要获取父组件的部分内容；在这种情况下，如果我们仍然将props沿着组件链逐级传递下去，就会非常的麻烦；对于这种情况下，我们可以使用Provide 和Inject ：
   + 无论层级结构有多深，父组件都可以作为其所有子组件的**依赖提供者**；父组件有一个**provide 选项**来提供数据；子组件有一个**inject 选项**来开始使用这些数据；
-  + ![image-20230416175732965](.\img\image-20230416175732965.png)
+  + <img src='.\img\image-20230416175732965.png'/>
   + 如果Provide中提供的一些数据是来自data，那么我们可能会想要通过this来获取：那么**Provide就必须是一个函数**
-    + ![image-20230416175900305](.\img\image-20230416175900305.png)
+    + <img src='.\img\image-20230416175900305.png'/>
     + **处理响应式数据**
       + 如果我们修改了this.names的内容，那么使用length的子组件是不会响应式的，这是因为当我们修改了names之后，之前在provide中引入的this.names.length 本身并不是响应式的；可以使用响应式的一些API来完成这些功能，**比如说computed函数；**
-      + ![image-20230416180207656](.\img\image-20230416180207656.png)![image-20230416180236525](.\img\image-20230416180236525.png)
+      + <img src='.\img\image-20230416180207656.png'/>
+      + <img src='.\img\image-20230416180236525.png'/>
       + 需要配置
-      + ![image-20230416180323440](.\img\image-20230416180323440.png)
+      + <img src='.\img\image-20230416180323440.png'/>
 
 + **Mitt全局事件总线；**
 
@@ -1050,14 +1049,14 @@ https://github.com/vuejs/core
 
     + 封装一个工具eventbus.js：
 
-      + ![image-20230416180515459](.\img\image-20230416180515459.png)
+      + <img src='.\img\image-20230416180515459.png'/>
 
       + 在App.vue中触发事件；在Home.vue中监听事件；
 
         + <img src=".\img\image-20230416182112743.png" alt="image-20230416182112743" style="zoom:50%;" /><img src=".\img\image-20230416182117331.png" alt="image-20230416182117331" style="zoom:50%;" />
 
         + 取消掉之前注册的函数监听
-          + ![image-20230416182237486](.\img\image-20230416182237486.png)
+          + <img src='.\img\image-20230416182237486.png'/>
 
 ### 8.4 插槽
 
@@ -1075,25 +1074,25 @@ https://github.com/vuejs/core
   + <img src=".\img\image-20230416182754111.png" alt="image-20230416182754111" style="zoom:50%;" /><img src=".\img\image-20230416182804118.png" alt="image-20230416182804118" style="zoom:50%;" />
   + **插槽的默认内容**
     + 有时候我们希望在使用插槽时，如果没有插入对应的内容，那么我们需要显示一个默认的内容：
-    + ![image-20230416182915386](.\img\image-20230416182915386.png)
+    + <img src='.\img\image-20230416182915386.png'/>
 
   + **多个插槽的效果**
     + 如果一个组件中含有多个插槽，我们插入多个内容时，会发现默认情况下每个插槽都会获取到我们插入的内容来显示；
-    + ![image-20230416183016403](.\img\image-20230416183016403.png)
+    + <img src='.\img\image-20230416183016403.png'/>
   + **具名插槽的使用**
     + 具名插槽顾名思义就是给插槽起一个名字，<slot> 元素有一个特殊的attribute：name；
     + 一个不带name 的slot，会带有隐含的名字default；
-    + ![image-20230416183123515](.\img\image-20230416183123515.png)
+    + <img src='.\img\image-20230416183123515.png'/>
     + 缩写：把参数之前的所有内容(v-slot:) 替换为字符#；
 
   + **动态插槽名**
     + 可以通过v-slot:[dynamicSlotName]方式动态绑定一个名称；
-    + ![image-20230416183202760](.\img\image-20230416183202760.png)
+    + <img src='.\img\image-20230416183202760.png'/>
 
   + **渲染作用域**
 
     + 父级模板里的所有内容都是在父级作用域中编译的；子模板里的所有内容都是在子作用域中编译的；
-    + ![image-20230416183511950](.\img\image-20230416183511950.png)
+    + <img src='.\img\image-20230416183511950.png'/>
 
   + **作用域插槽**
 
@@ -1105,21 +1104,21 @@ https://github.com/vuejs/core
       + 4.定义插槽的prop
       + 5.通过v-slot:default的方式获取到slot的props
       + 6.使用slotProps中的item和index
-      + ![image-20230416183712995](.\img\image-20230416183712995.png)
+      + <img src='.\img\image-20230416183712995.png'/>
 
     + **独占默认插槽的缩写**
       + 如果我们的插槽是默认插槽default，那么在使用的时候v-slot:default="slotProps"可以简写为vslot="slotProps"：
-      + ![image-20230416185038010](.\img\image-20230416185038010.png)
+      + <img src='.\img\image-20230416185038010.png'/>
       + 并且如果我们的插槽只有默认插槽时，组件的标签可以被当做插槽的模板来使用，这样，我们就可以将v-slot 直接用在组件上：
-      + ![image-20230416185131019](.\img\image-20230416185131019.png)
+      + <img src='.\img\image-20230416185131019.png'/>
 
     + **默认插槽和具名插槽混合**
 
       + 如果有默认插槽和具名插槽，那么按照完整的template来编写。
-      + ![image-20230416185228406](.\img\image-20230416185228406.png)
+      + <img src='.\img\image-20230416185228406.png'/>
 
       + 只要出现多个插槽，那么所有的插槽使用完整的基于<template> 的语法：
-      + ![image-20230416185321490](.\img\image-20230416185321490.png)
+      + <img src='.\img\image-20230416185321490.png'/>
 
 ### 8.5 动态组件
 
@@ -1128,36 +1127,35 @@ https://github.com/vuejs/core
 ​	![image-20230416185459911](.\img\image-20230416185459911.png)
 
 + **方式一**通过v-if来判断，显示不同的组件；
-  + ![image-20230416185601059](.\img\image-20230416185601059.png)
+  + <img src='.\img\image-20230416185601059.png'/>
 + **方式二**动态组件的方式；
   + 动态组件是使用**component 组件**，通过一个特殊的attribute **is** 来实现：
-  + ![image-20230416185651115](.\img\image-20230416185651115.png)
+  + <img src='.\img\image-20230416185651115.png'/>
   + **这个currentTab的值需要是**
     + 可以是通过component函数注册的组件；
     + 在一个组件对象的components对象中注册的组件；
   + **动态组件的传值**
-    + ![image-20230416185821431](.\img\image-20230416185821431.png)
+    + <img src='.\img\image-20230416185821431.png'/>
 
 ### 8.6 keep-alive
 
 ​	在切换组件时，about组件会被销毁掉，再次回来时会重新创建组件；但是，在开发中某些情况我们希望继续保持组件的状态，而不是销毁掉，这个时候我们就可以使用一个内置组件：keep-alive。
 
-​	![image-20230416190015701](.\img\image-20230416190015701.png)
+​	<img src='.\img\image-20230416190015701.png'/>
 
 + **keep-alive属性**
-
   + **include** - string | RegExp | Array。只有名称匹配的组件会被缓存；
-
+  
   + **exclude** - string | RegExp | Array。任何名称匹配的组件都不会被缓存；
   + **max** - number | string。最多可以缓存多少组件实例，一旦达到这个数字，那么缓存组件中最近没有被访问的实例会被销毁；
-
+  
 + include 和exclude prop 允许组件有条件地缓存：二者都可以用逗号分隔字符串、正则表达式或一个数组来表示；匹配首先检查组件自身的name 选项；
-  + ![image-20230416190230660](.\img\image-20230416190230660.png)
+  + <img src='.\img\image-20230416190230660.png'/>
 + **缓存组件的生命周期**
   + 对于缓存的组件来说，再次进入时，我们是不会执行created或者mounted等生命周期函数的：
   + 但是有时候我们确实希望监听到何时重新进入到了组件，何时离开了组件；
   + 这个时候我们可以使用activated 和deactivated 这两个生命周期钩子函数来监听；
-  + ![image-20230416190337375](.\img\image-20230416190337375.png)
+  + <img src='.\img\image-20230416190337375.png'/>
 
 ### 8.7异步组件
 
@@ -1165,14 +1163,14 @@ https://github.com/vuejs/core
 
 + **defineAsyncComponent**接受两种类型的参数：
   + 类型一：工厂函数，该工厂函数需要返回一个Promise对象；
-    + ![image-20230422122026872](.\img\image-20230422122026872.png)
+    + <img src='.\img\image-20230422122026872.png'/>
   + 类型二：接受一个对象类型，对异步函数进行配置；
-    + ![image-20230422122041639](.\img\image-20230422122041639.png)
+    + <img src='.\img\image-20230422122041639.png'/>
 + **Suspense组件**
   + Suspense是一个内置的全局组件，该组件有两个插槽：
     + default：如果default可以显示，那么显示default的内容；
     + fallback：如果default无法显示，那么会显示fallback插槽的内容；
-  + ![image-20230422122203164](.\img\image-20230422122203164.png)
+  + <img src='.\img\image-20230422122203164.png'/>
 
 ## 9. Webpack的代码分包
 
@@ -1183,31 +1181,31 @@ https://github.com/vuejs/core
 + 打包时，代码的分包：
   + 所以，对于一些不需要立即使用的组件，我们可以单独对它们进行拆分，拆分成一些小的代码块chunk.js；
   +  这些chunk.js会在需要时从服务器加载下来，并且运行代码，显示对应的内容；
-  + ![image-20230416190707526](.\img\image-20230416190707526.png)
+  + <img src='.\img\image-20230416190707526.png'/>
 
 + **Vue中实现异步组件**
   + 如果我们的项目过大了，对于某些组件我们希望通过异步的方式来进行加载（目的是可以对其进行分包处理），那么Vue中给我们提供了一个函数：**defineAsyncComponent**。
   + **defineAsyncComponent接受两种类型的参数：**
     + 类型一：工厂函数，该工厂函数需要返回一个Promise对象；
-    + ![image-20230416190832843](.\img\image-20230416190832843.png)
+    + <img src='.\img\image-20230416190832843.png'/>
     + 类型二：接受一个对象类型，对异步函数进行配置；
-    + ![image-20230416190841005](.\img\image-20230416190841005.png)
+    + <img src='.\img\image-20230416190841005.png'/>
 + **异步组件和Suspense**
   + Suspense是一个内置的全局组件，该组件有两个插槽：
     + default：如果default可以显示，那么显示default的内容；
     + fallback：如果default无法显示，那么会显示fallback插槽的内容；
-    + ![image-20230416191039041](.\img\image-20230416191039041.png)
+    + <img src='.\img\image-20230416191039041.png'/>
 
 ## 10.$refs、$parent、$root
 
 + $refs
   + 某些情况下，我们在组件中想要直接获取到元素对象或者子组件实例：在Vue开发中我们是不推荐进行DOM操作的；这个时候，我们可以给元素或者组件绑定一个ref的attribute属性；
   + 组件实例有一个$refs属性：它一个对象Object，持有注册过ref attribute 的所有DOM 元素和组件实例。
-    + ![image-20230416191446302](.\img\image-20230416191446302.png)
+    + <img src='.\img\image-20230416191446302.png'/>
 + $parent、$root
   + 我们可以通过$parent来访问父元素。
   + 这里我们也可以通过$root来实现，因为App是我们的根组件；
-  + ![image-20230416191524613](.\img\image-20230416191524613.png)
+  + <img src='.\img\image-20230416191524613.png'/>
 + 注意：在Vue3中已经移除了$children的属性，所以不可以使用了。
 
 ## 11. 生命周期
@@ -1228,21 +1226,21 @@ https://github.com/vuejs/core
 
 当我们在组件上使用v-model的时候，等价于如下的操作：
 
-![image-20230416191928897](.\img\image-20230416191928897.png)
+<img src='.\img\image-20230416191928897.png'/>
 
 那么，为了我们的MyInput组件可以正常的工作，这个组件内的<input> 必须：
 
 + 将其value attribute 绑定到一个名叫modelValue 的prop 上；
 
 + 其input 事件被触发时，将新的值通过自定义的update:modelValue 事件抛出；
-+ ![image-20230416211831233](.\img\image-20230416211831233.png)
-+ ![image-20230416211837202](.\img\image-20230416211837202.png)
++ <img src='.\img\image-20230416211831233.png'/>
++ <img src='.\img\image-20230416211837202.png'/>
 + **通过computed实现**
-  + ![image-20230416212003503](.\img\image-20230416212003503.png)
+  + <img src='.\img\image-20230416212003503.png'/>
 
 + **绑定多个属性**
   + 如果我们希望绑定更多，可以给v-model传入一个参数，那么这个参数的名称就是我们绑定属性的名称；
-  + ![image-20230416212102110](.\img\image-20230416212102110.png)
+  + <img src='.\img\image-20230416212102110.png'/>
   + **v-model:title相当于做了两件事：**
     + 绑定了title属性；
     + 监听了@update:title的事件；
@@ -1258,10 +1256,10 @@ https://github.com/vuejs/core
 
 + Vue 提供了transition 的封装组件，在下列情形中，可以给任何元素和组件添加进入/离开过渡：
   + **条件渲染(使用v-if)条件展示(使用v-show)**
-    + ![image-20230422133441524](.\img\image-20230422133441524.png)
-    + ![image-20230422133448500](.\img\image-20230422133448500.png)
+    + <img src='.\img\image-20230422133441524.png'/>
+    + <img src='.\img\image-20230422133448500.png'/>
   + **动态组件**
-    + ![image-20230422182725385](.\img\image-20230422182725385.png)
+    + <img src='.\img\image-20230422182725385.png'/>
   + **组件根节点**
 + **Transition组件的原理**
   + 当插入或删除包含在transition 组件中的元素时，Vue 将会做以下处理：
@@ -1281,22 +1279,22 @@ https://github.com/vuejs/core
   + v-leave-to：离开过渡的结束状态。在离开过渡被触发之后下一帧生效(与此同时v-leave-from 被删除)，在过渡/动画完成之后移除。
   
 + **class添加的时机和命名规则**
-  + ![image-20230422134832095](.\img\image-20230422134832095.png)
+  + <img src='.\img\image-20230422134832095.png'/>
     + 如果我们使用的是一个没有name的transition，那么所有的class是以v- 作为默认前缀；
     + 如果我们添加了一个name属性，比如<transtion name="why">，那么所有的class会以why- 开头；
   
 + **通过animation实现动画**
-  + ![image-20230422182223793](.\img\image-20230422182223793.png)![image-20230422182227529](.\img\image-20230422182227529.png)
+  + <img src='.\img\image-20230422182223793.png'/><img src='.\img\image-20230422182227529.png'/>
   
 + **同时设置过渡和动画**
   + 如果我们同时使用了过渡和动画，并且在这个情况下可能某一个动画执行结束时，另外一个动画还没有结束；在这种情况下，我们可以设置type 属性为animation 或者transition 来明确的告知Vue监听的类型；
-  + ![image-20230422182357416](.\img\image-20230422182357416.png)
+  + <img src='.\img\image-20230422182357416.png'/>
   
 + **显示的指定动画时间**
   + 指定过渡的时间，通过duration 属性。duration可以设置两种类型的值：
     + number类型：同时设置进入和离开的过渡时间；
     + object类型：分别设置进入和离开的过渡时间；
-    + ![image-20230422182536550](.\img\image-20230422182536550.png)<img src=".\img\image-20230422182541277.png" alt="image-20230422182541277" style="zoom:50%;" />
+    + <img src='.\img\image-20230422182536550.png'/><img src=".\img\image-20230422182541277.png" alt="image-20230422182541277" style="zoom:50%;" />
 
 + **过渡的模式mode**
   + 当动画在两个元素之间切换的时候存在的问题：![image-20230422182641493](.\img\image-20230422182641493.png)
@@ -1307,7 +1305,7 @@ https://github.com/vuejs/core
   
 + **appear初次渲染**
   + 默认情况下，首次渲染的时候是没有动画的，如果我们希望给他添加上去动画，那么就可以增加另外一个属性appear：
-  + ![image-20230422182834445](.\img\image-20230422182834445.png)
+  + <img src='.\img\image-20230422182834445.png'/>
 
 + **animate.css库的使用**
 
@@ -1315,9 +1313,9 @@ https://github.com/vuejs/core
   + 在main.js中导入animate.css：
   + 用法：
     + 用法一：直接使用animate库中定义的keyframes 动画；
-      + ![image-20230501105039101](.\img\image-20230501105039101.png)
+      + <img src='.\img\image-20230501105039101.png'/>
     + 用法二：直接使用animate库提供给我们的类；
-      + ![image-20230501105050896](.\img\image-20230501105050896.png)
+      + <img src='.\img\image-20230501105050896.png'/>
 
 + **gsap库**
 
@@ -1334,10 +1332,10 @@ https://github.com/vuejs/core
 
   + gsap库的使用
 
-    + ![image-20230501224530269](.\img\image-20230501224530269.png)![image-20230501224534681](.\img\image-20230501224534681.png)
+    + <img src='.\img\image-20230501224530269.png'/><img src='.\img\image-20230501224534681.png'/>
     + **gsap实现数字变化**
-      + ![image-20230501224612576](.\img\image-20230501224612576.png)
-      + ![image-20230501224617630](.\img\image-20230501224617630.png)
+      + <img src='.\img\image-20230501224612576.png'/>
+      + <img src='.\img\image-20230501224617630.png'/>
 
 + **列表的过渡**
 
