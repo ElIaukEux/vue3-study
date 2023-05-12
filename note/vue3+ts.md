@@ -139,7 +139,7 @@
 + MVC是Model-View-Controller的简称，是在前期被使用非常框架的架构模式，比如iOS、前端；
   + <img src=".\img\image-20230317221737084.png" alt="image-20230317221737084" style="zoom:50%;" />
 
-+ MVM是Model--View-ViewModel的简称，是目前非常流行的架构模式；
++ MVVM是Model--View-ViewModel的简称，是目前非常流行的架构模式；
 
 <img src=".\img\image-20230317221909853.png" alt="image-20230317221909853" style="zoom:50%;" /><img src=".\img\image-20230317222649782.png" alt="image-20230317222649782" style="zoom:50%;" />
 
@@ -232,7 +232,7 @@
 ​	**data属性是传入一个函数，并且该函数需要返回一个对象：**
 
 + 在Vue2.x的时候，也可以传入一个对象（虽然官方推荐是一个函数）
-+ 在Vue3.x的时候，比如传入一个函数，否则就会直接在浏览器中报错；
++ 在Vue3.x的时候，必须传入一个函数，否则就会直接在浏览器中报错；
 
 ​	**data中返回的对象会被Vue的响应式系统劫持，之后对该对象的修改或者访问都会在劫持中被处理：**
 
