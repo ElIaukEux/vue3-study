@@ -525,13 +525,13 @@ https://github.com/vuejs/core
     + 相同则，继续遍历执行patch操作
     + 不同则，跳出循环
     + <img src='.\img\image-20230319115223251.png'/>
-    + **从尾部开始遍历**
-      + 相同则继续遍历
-      + 不同则跳出循环
-      + <img src = '.\img\image-20230319115244315.png'/>
-    + **如果旧节点遍历完了，依然有新的节点，那么就创建新的节点并进行添加** 
-      + <img src='.\img\image-20230319115314013.png'/>
-  +  **如果新的节点遍历完毕，但是依然有旧的节点，那么就移除旧节点**
+  + **从尾部开始遍历**
+    + 相同则继续遍历
+    + 不同则跳出循环
+    + <img src = '.\img\image-20230319115244315.png'/>
+  + **如果旧节点遍历完了，依然有新的节点，那么就创建新的节点并进行添加** 
+    + <img src='.\img\image-20230319115314013.png'/>
+  + **如果新的节点遍历完毕，但是依然有旧的节点，那么就移除旧节点**
     + <img src='.\img\image-20230319115353607.png'/>
 
   + **特殊的情况，中间还有很多未知的或者乱序的节点：**
@@ -1833,3 +1833,70 @@ https://github.com/vuejs/core
     + 在我们的生命周期中，我们可以通过**bindings** 获取到对应的内容：
     + ![image-20230503210632422](.\img\image-20230503210632422.png)
 
++ **时间戳转换**
+
+  + ```js
+    	import dayjs from 'dayjs'
+    
+    	export default function(app) {
+    		let format = 'YYYY-MM-DD HH:mm:ss'
+    		app.directive('format-date',{
+    			created(el,bingings) {
+    				if (bingings.value) {
+    					format = bingings.value
+    				}
+    			},
+    			mounted(el) {
+    				const textContent = el.textContent;
+    				let timestamp = parseInt(el.textContent)
+    				if(textContent.length == 10 ) {
+    					timestamp = timestamp * 1000 // 有的时间戳不是毫秒得转换
+    				}
+    				el.textContent = dayjs(timestamp).format(format);
+    			}
+    		})
+    	}
+    ```
+
+## 19. Teleport
+
+在组件化开发中，我们封装一个组件A，在另外一个组件B中使用：
+
++ 那么组件A中template的元素，会被挂载到组件B中template的某个位置；
++ 最终我们的应用程序会形成一颗DOM树结构；
+
+但是某些情况下，我们希望组件不是挂载在这个组件树上的，可能是移动到Vue app之外的其他位置：
+
++ 比如移动到body元素上，或者我们有其他的div#app之外的元素上；
++ 这个时候我们就可以通过teleport来完成；
+
+**Teleport是一个Vue提供的内置组件，它有两个属性：**
+
++ to：指定将其中的内容移动到的目标元素，可以使用选择器；
++ disabled：是否禁用teleport 的功能；
+
+![image-20230514122010058](./img/image-20230514122010058.png)<img src="./img/image-20230514122025316.png" alt="image-20230514122025316" style="zoom:67%;" />
+
+**teleport也可以和组件结合一起来使用：**
+
+<img src="./img/image-20230514122223341.png" alt="image-20230514122223341" style="zoom:67%;" /><img src="./img/image-20230514122238194.png" alt="image-20230514122238194" style="zoom:67%;" />
+
+**如果我们将多个teleport应用到同一个目标上（to的值相同），那么这些目标会进行合并：**
+
+<img src="./img/image-20230514122321039.png" alt="image-20230514122321039" style="zoom:67%;" /><img src="./img/image-20230514122341887.png" alt="image-20230514122341887" style="zoom:67%;" />
+
+## 20. Vue插件
+
+通常我们**向Vue全局添加一些功能时，会采用插件的模式**，它有两种编写方式：
+
++ **对象类型**：一个对象，但是必须包含一个install 的函数，该函数会在安装插件时执行；
+  + ![image-20230514122632830](./img/image-20230514122632830.png)
++ **函数类型**：一个function，这个函数会在安装插件时自动执行；
+  + ![image-20230514122639486](./img/image-20230514122639486.png)
+
+插件可以完成的功能没有限制，比如下面的几种都是可以的：
+
++ 添加全局方法或者property，通过把它们添加到config.globalProperties 上实现；
++ 添加全局资源：指令/过滤器/过渡等；
++ 通过全局mixin 来添加一些组件选项；
++ 一个库，提供自己的API，同时提供上面提到的一个或多个功能；

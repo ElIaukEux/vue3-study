@@ -1,6 +1,7 @@
 <template>
 	<div>
 		<span class="box">测试111</span>
+		<span v-format-date>1684037616</span>
 	</div>
 </template>
 
