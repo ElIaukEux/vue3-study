@@ -42,15 +42,22 @@ const patch = (n1, n2) => {
 
 		// 1. 先将新节点的prop全部挂载到el上
 		for(const key in n2Props) {
-			let value = n2Props[key]
-			if (key.startsWith('on')) {
-				el.addEventListener(key.slice(2).toLowerCase(), value)
-			}else {
-				el.setAttribute(key, value)
+			let oldValue = n1Props[key]
+			let newValue = n2Props[key]
+			if(oldValue !== newValue) {
+				if (key.startsWith('on')) {
+					el.addEventListener(key.slice(2).toLowerCase(), newValue)
+				}else {
+					el.setAttribute(key, newValue)
+				}
 			}
 		}
 		// 2. 判断旧节点上的属性新节点没有时，删除对应的属性
 		for(const key in n1Props) {
+			if(key.startsWith('on')) {
+				const value = n1Props[key];
+				el.removeEventListener(key.slice(2).toLowerCase(), value)
+			}
 			if(!(key in n2Props)) {
 				el.removeAttribute(key)
 			}

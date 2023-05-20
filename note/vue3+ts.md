@@ -692,7 +692,7 @@ https://github.com/vuejs/core
   + <img src=".\img\image-20230319184714037.png" alt="image-20230319184714037" style="zoom:50%;" />
 + **其他写法**
 
-  + ![image-20230319185815401](D:/a-study/study-code/09-vue3+T3/note/image-20230319185815401.png)
+  + ![image-20230319185815401](./img/image-20230319185815401.png)
 
   + 在created中使用this.$watchs()来监听
     + 第一个参数是要侦听的源；
