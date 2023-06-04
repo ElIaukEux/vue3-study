@@ -224,3 +224,65 @@
   + 通过调用history.back() 回溯历史。相当于router.go(-1)；
 + router也有forward：
   + 通过调用history.forward() 在历史中前进。相当于router.go(1)；
+
+### 3.12 router-link的v-slot
+
++ 在vue-router3.x的时候，router-link有一个**tag**属性，可以决定router-link到底渲染成什么元素：
+  + 但是在vue-router4.x开始，该属性被移除了；
+  + 而给我们提供了更加具有灵活性的**v-slot**的方式来定制渲染的内容；
++ **v-slot如何使用**
+  + **需要使用custom表示我们整个元素要自定义**
+    + 如果不写，那么自定义的内容会被包裹在一个a 元素中；
+  + 使用v-slot来作用域插槽来获取内部传给我们的值：
+    + href：解析后的URL；
+    + route：解析后的规范化的route对象；
+    + navigate：触发导航的函数；(在自定义时使用)
+    + isActive：是否匹配的状态；
+    + isExactActive：是否是精准匹配的状态；（跳转到的路径是否跟to里面的是否一致）
+    + ![image-20230604150033391](./img/image-20230604150033391.png)
+  + router-view也提供给我们一个插槽，可以用于<transition> 和<keep-alive> 组件来包裹你的路由组件：
+    + Component：要渲染的组件；
+    + route：解析出的标准化路由对象；
+    + <img src="./img/image-20230604150048778.png" alt="image-20230604150048778" style="zoom:67%;" />![image-20230604150059687](./img/image-20230604150059687.png)
+
+### 3.13 动态添加路由
+
++ 某些情况下我们可能需要动态的来添加路由：
+  + 比如根据用户不同的权限，注册不同的路由；
+  + 这个时候我们可以使用一个方法addRoute；
++ 如果我们是为route添加一个children路由，那么可以传入对应的name：
+  + <img src="./img/image-20230604150218752.png" alt="image-20230604150218752" style="zoom:67%;" /><img src="./img/image-20230604150237080.png" alt="image-20230604150237080" style="zoom:67%;" />
+
+### 3.14 动态删除路由
+
++ 方式一：添加一个name相同的路由；
+  + ![image-20230604150322254](./img/image-20230604150322254.png)
++ 方式二：通过removeRoute方法，传入路由的名称；
+  + ![image-20230604150334456](./img/image-20230604150334456.png)
++ 方式三：通过addRoute方法的返回值回调；
+  + ![image-20230604150347968](./img/image-20230604150347968.png)
+
+### 3.15 路由的其他方法补充：
+
++ router.hasRoute()：检查路由是否存在。
++ router.getRoutes()：获取一个包含所有路由记录的数组。
+
+### 3.16 路由导航守卫
+
++ vue-router 提供的导航守卫主要用来通过跳转或取消的方式守卫导航。
++ **全局的前置守卫beforeEach**是在导航触发时会被回调的：
+  + 它有**两个参数**：
+    + to：即将进入的路由Route对象；
+    + from：即将离开的路由Route对象；
+  + 它有返回值：
+    + false：取消当前导航；
+    + 不返回或者undefined：进行默认导航；
+    + 返回一个路由地址：
+      + 可以是一个string类型的路径；
+      + 可以是一个对象，对象中包含path、query、params等信息；
+    + 可选的第三个参数：next
+      + 在Vue2中我们是通过next函数来决定如何进行跳转的；
+      + 但是在Vue3中我们是通过返回值来控制的，**不再推荐使用next函数**，这是因为开发中很容易调用多次next；
+    + ![image-20230604150745891](./img/image-20230604150745891.png)
++ 登录守卫功能
+  + <img src="./img/image-20230604150806281.png" alt="image-20230604150806281" style="zoom:67%;" /><img src="./img/image-20230604150821196.png" alt="image-20230604150821196" style="zoom:67%;" />

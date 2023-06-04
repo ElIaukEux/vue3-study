@@ -1124,7 +1124,7 @@ https://github.com/vuejs/core
 
 ​	实现了一个功能：点击一个tab-bar，切换不同的组件显示；
 
-​	![image-20230416185459911](.\img\image-20230416185459911.png)
+​	<img src='.\img\image-20230416185459911.png'/>
 
 + **方式一**通过v-if来判断，显示不同的组件；
   + <img src='.\img\image-20230416185601059.png'/>

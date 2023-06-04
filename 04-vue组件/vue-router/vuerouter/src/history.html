@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<a href="/home">首页</a>
+	<a href="/about">关于</a>
+	<h1></h1>
+	<script>
+		const as = document.querySelectorAll('a')
+		const h1 = document.querySelector('h1');
+		function historyChange() {
+			switch(location.pathname) {
+				case '/home':
+					h1.innerHTML = 'home内容'
+					break
+				case '/about':
+					h1.innerHTML = 'about内容'
+					break
+				default: 
+					h1.innerHTML = 'default'
+			}
+		}
+		historyChange()
+		as.forEach(item => {
+			item.addEventListener('click',(e) => {
+				e.preventDefault();
+				const href = item.getAttribute('href');
+				// pushState(state, title, url)  将一个新的状态添加到浏览器历史记录中，而不会导致浏览器进行实际的页面刷新
+				// state：对象，用于保存当前浏览器的状态的数据，
+				// title: 字符串，表示新的历史记录条目的标题，目前大多数浏览器会忽略
+				// url : 字符串，表示新的历史记录条目的url
+				history.pushState({},'',href)
+				historyChange()
+			})
+		})
+	</script>
+</body>
+</html>

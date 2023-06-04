@@ -54,7 +54,7 @@ const patch = (n1, n2) => {
 		}
 		// 2. 判断旧节点上的属性新节点没有时，删除对应的属性
 		for(const key in n1Props) {
-			if(key.startsWith('on')) {
+			if(key.startsWith('on')) {// 每次需要把事件都删除
 				const value = n1Props[key];
 				el.removeEventListener(key.slice(2).toLowerCase(), value)
 			}

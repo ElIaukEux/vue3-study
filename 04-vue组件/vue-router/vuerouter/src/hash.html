@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<a href="#/home">首页</a>
+	<a href="#/about">关于</a>
+	<h1></h1>
+	<script>
+		const as = document.querySelectorAll('a')
+		const h1 = document.querySelector('h1');
+			window.addEventListener('hashchange',()=> {
+				console.log(location.hash);
+				switch(location.hash) {
+					case '#/home':
+						h1.innerHTML = 'home内容'
+						break
+					case '#/about':
+						h1.innerHTML = 'about内容'
+						break
+					default: 
+						h1.innerHTML = 'default'
+				}
+			})
+	</script>
+</body>
+</html>
