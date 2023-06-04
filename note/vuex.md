@@ -15,7 +15,7 @@
     + https://github.com/vuejs/devtools/tree/v6.0.0-beta.15下载代码；
     + 执行yarn install 安装相关的依赖；
     + 执行yarn run build 打包；
-    + <img src="./img/image-20230604223733834.png" alt="image-20230604223733834" style="zoom:67%;" /><img src="./img/image-20230604223742889.png" alt="image-20230604223742889" style="zoom:67%;" />
+    + ![image-20230604223733834](./img/image-20230604223733834.png)![image-20230604223742889](./img/image-20230604223742889.png)
 
 ## 3. Store
 
