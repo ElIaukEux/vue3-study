@@ -1231,20 +1231,18 @@ https://github.com/vuejs/core
 那么，为了我们的MyInput组件可以正常的工作，这个组件内的<input> 必须：
 
 + 将其value attribute 绑定到一个名叫modelValue 的prop 上；
-
 + 其input 事件被触发时，将新的值通过自定义的update:modelValue 事件抛出；
 + <img src='.\img\image-20230416211831233.png'/>
 + <img src='.\img\image-20230416211837202.png'/>
 + **通过computed实现**
   + <img src='.\img\image-20230416212003503.png'/>
-
 + **绑定多个属性**
   + 如果我们希望绑定更多，可以给v-model传入一个参数，那么这个参数的名称就是我们绑定属性的名称；
   + <img src='.\img\image-20230416212102110.png'/>
   + **v-model:title相当于做了两件事：**
     + 绑定了title属性；
     + 监听了@update:title的事件；
-    + ![image-20230416212144893](.\img\image-20230416212144893.png)
+    + <img src='.\img\image-20230416212144893.png'/>
 
 ## 13.过渡和动画
 
@@ -1281,7 +1279,7 @@ https://github.com/vuejs/core
 + **class添加的时机和命名规则**
   + <img src='.\img\image-20230422134832095.png'/>
     + 如果我们使用的是一个没有name的transition，那么所有的class是以v- 作为默认前缀；
-    + 如果我们添加了一个name属性，比如<transtion name="why">，那么所有的class会以why- 开头；
+    + 如果我们添加了一个name属性，比如`<transtion name="why">`，那么所有的class会以why- 开头；
   
 + **通过animation实现动画**
   + <img src='.\img\image-20230422182223793.png'/><img src='.\img\image-20230422182227529.png'/>
@@ -1297,7 +1295,7 @@ https://github.com/vuejs/core
     + <img src='.\img\image-20230422182536550.png'/><img src=".\img\image-20230422182541277.png" alt="image-20230422182541277" style="zoom:50%;" />
 
 + **过渡的模式mode**
-  + 当动画在两个元素之间切换的时候存在的问题：![image-20230422182641493](.\img\image-20230422182641493.png)
+  + 当动画在两个元素之间切换的时候存在的问题：<img src='.\img\image-20230422182641493.png'/>
   + 这是因为默认情况下进入和离开动画是同时发生的；如果我们不希望同时执行进入和离开动画，那么我们需要设置transition的过渡模式：
     + in-out: 新元素先进行过渡，完成之后当前元素过渡离开；
     + out-in: 当前元素先进行过渡，完成之后新元素过渡进入；
@@ -1900,3 +1898,9 @@ https://github.com/vuejs/core
 + 添加全局资源：指令/过滤器/过渡等；
 + 通过全局mixin 来添加一些组件选项；
 + 一个库，提供自己的API，同时提供上面提到的一个或多个功能；
+
+## 21. nexttick
+
++ 官方解释：将回调推迟到下一个DOM 更新周期之后执行。在更改了一些数据以等待DOM 更新后立即使用它。
++ 
+
