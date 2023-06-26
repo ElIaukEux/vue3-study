@@ -1491,7 +1491,7 @@ https://github.com/vuejs/core
 + 一个Mixin对象可以包含**任何组件选项；**
 + 当组件使用Mixin对象时，所有**Mixin对象的选项将被混合进入该组件本身的选项**中；
 
-![image-20230502103912041](.\img\image-20230502103912041.png)
+<img src='.\img\image-20230502103912041.png'/>
 
 + **Mixin的合并规则**
   + 情况一：如果是data函数的返回值对象
@@ -1506,13 +1506,13 @@ https://github.com/vuejs/core
   + 如果组件中的某些选项，是所有的组件都需要拥有的，那么这个时候我们可以使用全局的mixin：
     + 全局的Mixin可以使用应用app的方法mixin 来完成注册；
     + 一旦注册，那么全局混入的选项将会影响每一个组件；
-  + ![image-20230502104453070](.\img\image-20230502104453070.png)
+  + <img src='.\img\image-20230502104453070.png'/>
 
 ### 14.2 extends
 
 允许声明扩展另外一个组件，类似于Mixins；
 
-![image-20230502104545257](.\img\image-20230502104545257.png)
+<img src='.\img\image-20230502104545257.png'/>
 
 ## 15. Composition API
 
@@ -1549,22 +1549,21 @@ https://github.com/vuejs/core
     + emit：当我们组件内部需要发出事件时会用到emit（因为我们不能访问this，所以不可以通过this.$emit发出事件）；
 
 + **setup函数的返回值**
-
-  + setup的返回值可以**在模板template**中被使用；也就是说我们可以通过setup的返回值来**替代data选项**；甚至是我们可以**返回一个执行函数**来代替在methods中定义的方法：
-
-    + ![image-20230502105929497](.\img\image-20230502105929497.png)![image-20230502105934508](.\img\image-20230502105934508.png)
-
-    + 将counter 在increment 或者decrement进行操作时，是不能实现界面的响应式的。因为对于一个定义的变量来说，默认情况下，Vue并不会跟踪它的变化，来引起界面的响应式操作；可通过**Reactive API、Ref API**
++ setup的返回值可以**在模板template**中被使用；也就是说我们可以通过setup的返回值来**替代data选项**；甚至是我们可以**返回一个执行函数**来代替在methods中定义的方法：
+  
+  + <img src='.\img\image-20230502105929497.png'/><img src='.\img\image-20230502105934508.png'/>
+  
+  + 将counter 在increment 或者decrement进行操作时，是不能实现界面的响应式的。因为对于一个定义的变量来说，默认情况下，Vue并不会跟踪它的变化，来引起界面的响应式操作；可通过**Reactive API、Ref API**
 + **在setup中使用ref获取元素或者组件**
   + 只需要定义一个ref对象，绑定到元素或者组件的ref属性上即可；
-  + ![image-20230503115648341](.\img\image-20230503115648341.png)
+  + <img src='.\img\image-20230503115648341.png'/>
 
 
 ### 15.3 reactive API
 
 如果想为在setup中定义的数据提供响应式的特性，那么我们可以使用reactive的函数：
 
-![image-20230502110904378](.\img\image-20230502110904378.png)
+<img src='.\img\image-20230502110904378.png'/>
 
 + 这是因为当我们使用reactive函数处理我们的数据之后，数据再次被使用时就会进行依赖收集；
 + 当数据发生改变时，所有收集到的依赖都是进行对应的响应式操作（比如更新界面）；
@@ -1576,7 +1575,7 @@ https://github.com/vuejs/core
 
 + ref 会返回一个可变的响应式对象，该对象作为一个响应式的引用维护着它内部的值，这就是ref名称的来源；
 + 它内部的值是在ref的value 属性中被维护的；
-+ ![image-20230502111112012](.\img\image-20230502111112012.png)
++ <img src='.\img\image-20230502111112012.png'/>
 + **注意：**
   + 在**模板中引入ref的值时**，Vue会自动帮助我们进行解包操作，所以我们并不需要在模板中**通过ref.value** 的方式来使用；
     + 模板中的解包是**浅层的解包**，如果我们的代码是下面的方式：
@@ -1597,7 +1596,7 @@ https://github.com/vuejs/core
   + 创建一个浅层的ref对象；
 + **triggerRef**
   + 手动触发和shallowRef 相关联的副作用：
-  + ![image-20230503103217773](.\img\image-20230503103217773.png)
+  + <img src='.\img\image-20230503103217773.png'/>
 
 ### 15.5 readonly
 
@@ -1623,12 +1622,12 @@ https://github.com/vuejs/core
 
 + **toRefs的函数，可以将reactive返回的对象中的属性都转成ref；**
 
-​	![image-20230503102759888](.\img\image-20230503102759888.png)
+​	<img src='.\img\image-20230503102759888.png'/>
 
 ​	这种做法相当于已经在state.name和ref.value之间建立了链接，任何一个修改都会引起另外一个变化；
 
 + 如果只希望转换一个reactive对象中的属性为ref, 那么可以使用toRef的方法：
-  + ![image-20230503102918592](.\img\image-20230503102918592.png)
+  + <img src='.\img\image-20230503102918592.png'/>
 
 ### 15.7 customRef
 
@@ -1637,7 +1636,7 @@ https://github.com/vuejs/core
     + 一般来说，`track()` 应该在 `get()` 方法中调用，而 `trigger()` 应该在 `set()` 中调用。对何时调用、是否应该调用他们有完全的控制权。
   + 并且应该返回一个带有get 和set 的对象；
 + 案例：对双向绑定的属性进行debounce(节流)的操作；
-  + ![image-20230503112225540](.\img\image-20230503112225540.png)
+  + <img src='.\img\image-20230503112225540.png'/>
 
 ### 15.8 Reactive判断的API
 
@@ -1660,9 +1659,9 @@ https://github.com/vuejs/core
 
 + 使用
   + 方式一：接收一个getter函数，并为getter 函数返回的值，返回一个不变的ref 对象；
-    + ![image-20230503112403663](.\img\image-20230503112403663.png)
+    + <img src='.\img\image-20230503112403663.png'/>
   + 方式二：接收一个具有get 和set 的对象，返回一个可变的（可读写）ref 对象；
-    + ![image-20230503112421788](.\img\image-20230503112421788.png)
+    + <img src='.\img\image-20230503112421788.png'/>
 
 ### 15.10 侦听数据的变化 watchEffect、watch
 
@@ -1676,21 +1675,21 @@ https://github.com/vuejs/core
     + <img src=".\img\image-20230503115140782.png" alt="image-20230503115140782" style="zoom:50%;" />
 + 如果在发生某些情况下，我们希望**停止侦听**，这个时候我们可以获取watchEffect的返回值函数，调用该函数即可。
   + 比如在上面的案例中，我们age达到20的时候就停止侦听：
-  + ![image-20230503115239950](.\img\image-20230503115239950.png)
+  + <img src='.\img\image-20230503115239950.png'/>
 + **watchEffect清除副作用**
   + 比如在开发中我们需要在侦听函数中执行网络请求，但是在网络请求还没有达到的时候，我们停止了侦听器，或者侦听器侦听函数被再次执行了。那么上一次的网络请求应该被取消掉，这个时候我们就可以清除上一次的副作用；
   + 在我们给watchEffect传入的函数被回调时，其实可以获取到一个参数：**onInvalidate**
     + 当副作用即将重新执行或者侦听器被停止时会执行该函数传入的回调函数；
     + 我们可以在传入的回调函数中，执行一些清楚工作；
-  + ![image-20230503115445415](.\img\image-20230503115445415.png)
+  + <img src='.\img\image-20230503115445415.png'/>
 + **watchEffect的执行时机**
   + 默认情况下，组件的更新会在副作用函数执行之前：
-    + ![image-20230503115812160](.\img\image-20230503115812160.png)![image-20230503115817043](.\img\image-20230503115817043.png)
+    + <img src='.\img\image-20230503115812160.png'/><img src='.\img\image-20230503115817043.png'/>
     + 发现打印结果打印了两次：
       + 这是因为setup函数在执行时就会立即执行传入的副作用函数，这个时候DOM并没有挂载，所以打印为null；
       + 而当DOM挂载时，会给title的ref对象赋值新的值，副作用函数会再次执行，打印出来对应的元素；
   + **改变副作用函数的执行时机：它的默认值是pre**，它会在元素挂载或者更新之前执行；
-    + ![image-20230503115938477](.\img\image-20230503115938477.png)
+    + <img src='.\img\image-20230503115938477.png'/>
     + flush 选项还接受sync，这将强制效果始终同步触发。然而，这是低效的，应该很少需要。
 
 #### 15.10.2 watch
@@ -1710,22 +1709,22 @@ https://github.com/vuejs/core
     + 直接写入一个**可响应式的对象**，reactive或者ref（比较常用的是ref）；
     + <img src=".\img\image-20230503122339152.png" alt="image-20230503122339152" style="zoom:50%;" /><img src=".\img\image-20230503122342717.png" alt="image-20230503122342717" style="zoom:50%;" />
 + **侦听多个数据源**
-  + ![image-20230503122428883](.\img\image-20230503122428883.png)
+  + <img src='.\img\image-20230503122428883.png'/>
 + **侦听响应式对象**
   + 如果我们希望侦听一个数组或者对象，那么可以使用一个getter函数，并且对可响应对象进行解构：
-  + ![image-20230503122455461](.\img\image-20230503122455461.png)
+  + <img src='.\img\image-20230503122455461.png'/>
 + **watch的选项** （新旧值会一样）
   + 如果我们希望侦听一个**深层的侦听**，那么依然需要设置**deep 为true**：
   + 也可以传入**immediate** 立即执行；
-  + ![image-20230503122537345](.\img\image-20230503122537345.png)
+  + <img src='.\img\image-20230503122537345.png'/>
 
 ### 15.11 生命周期钩子
 
 ​	**可以使用直接导入的onX 函数注册生命周期钩子；**
 
-![image-20230503165202466](.\img\image-20230503165202466.png)![image-20230503165205921](.\img\image-20230503165205921.png)
+<img src='.\img\image-20230503165202466.png'/><img src='.\img\image-20230503165205921.png'/>
 
-![image-20230503165218383](.\img\image-20230503165218383.png)
+<img src='.\img\image-20230503165218383.png'/>
 
 ### 15.12 Provide函数、inject函数 
 
@@ -1733,20 +1732,20 @@ https://github.com/vuejs/core
   + provide可以传入两个参数：
     + name：提供的属性名称；
     + value：提供的属性值；
-  + ![image-20230503165327876](.\img\image-20230503165327876.png)
+  + <img src='.\img\image-20230503165327876.png'/>
 
 + 在后代组件中可以通过**inject** 来注入需要的属性和对应的值：
   + 可以通过inject 来注入需要的内容；
   + inject可以传入两个参数：
     + 要inject 的property 的name；
     + 默认值；
-  + ![image-20230503165432354](.\img\image-20230503165432354.png)
+  + <img src='.\img\image-20230503165432354.png'/>
 + 为了增加provide 值和inject 值之间的**响应性**，我们可以在provide 值时使用ref 和reactive。
-  + ![image-20230503165519707](.\img\image-20230503165519707.png)
+  + <img src='.\img\image-20230503165519707.png'/>
 + **修改响应式Property**
   + 如果我们需要修改可响应的数据，那么最好是在数据提供的位置来修改：
   + 我们可以将修改方法进行共享，在后代组件中进行调用；
-  + ![image-20230503165602818](.\img\image-20230503165602818.png)
+  + <img src='.\img\image-20230503165602818.png'/>
 
 ## 16. h函数
 
@@ -1764,11 +1763,11 @@ https://github.com/vuejs/core
   + 其实更准备的命名是createVNode() 函数，但是为了简便，Vue将之简化为h() 函数；
   + **接受三个参数：**
     + 第一个参数：
-      + ![image-20230503180205037](.\img\image-20230503180205037.png)
+      + <img src='.\img\image-20230503180205037.png'/>
     + 第二个参数：
-      + ![image-20230503180222339](.\img\image-20230503180222339.png)
+      + <img src='.\img\image-20230503180222339.png'/>
     + 第三个参数：
-      + ![image-20230503180232296](.\img\image-20230503180232296.png)
+      + <img src='.\img\image-20230503180232296.png'/>
   + **注意事项：**
     + 如果没有props，那么通常可以将children作为第二个参数传入；
     + 如果会产生歧义，可以将null作为第二个参数传入，将children作为第三个参数传入；
@@ -1795,7 +1794,7 @@ https://github.com/vuejs/core
   + **安装Babel支持Vue的jsx插件：**
     + `npm install @vue/babel-plugin-jsx -D`
   + **在babel.config.js配置文件中配置插件：**
-    + ![image-20230503190148263](.\img\image-20230503190148263.png)![image-20230503190759545](.\img\image-20230503190759545.png)
+    + <img src='.\img\image-20230503190148263.png'/><img src='.\img\image-20230503190759545.png'/>
 
 ## 18.自定义组件
 
@@ -1824,12 +1823,12 @@ https://github.com/vuejs/core
     + beforeUnmount：在卸载绑定元素的父组件之前调用；
     + unmounted：当指令与元素解除绑定且父组件已卸载时，只调用一次；
 + **指令的参数和修饰符**
-  + ![image-20230503210557163](.\img\image-20230503210557163.png)
+  + <img src='.\img\image-20230503210557163.png'/>
     + info是参数的名称；
     + aaa-bbb是修饰符的名称；
     + 后面是传入的具体的值；
     + 在我们的生命周期中，我们可以通过**bindings** 获取到对应的内容：
-    + ![image-20230503210632422](.\img\image-20230503210632422.png)
+    + <img src='.\img\image-20230503210632422.png'/>
 
 + **时间戳转换**
 
@@ -1873,7 +1872,7 @@ https://github.com/vuejs/core
 + to：指定将其中的内容移动到的目标元素，可以使用选择器；
 + disabled：是否禁用teleport 的功能；
 
-![image-20230514122010058](./img/image-20230514122010058.png)<img src="./img/image-20230514122025316.png" alt="image-20230514122025316" style="zoom:67%;" />
+<img src='./img/image-20230514122010058.png'/><img src="./img/image-20230514122025316.png" alt="image-20230514122025316" style="zoom:67%;" />
 
 **teleport也可以和组件结合一起来使用：**
 
@@ -1888,9 +1887,9 @@ https://github.com/vuejs/core
 通常我们**向Vue全局添加一些功能时，会采用插件的模式**，它有两种编写方式：
 
 + **对象类型**：一个对象，但是必须包含一个install 的函数，该函数会在安装插件时执行；
-  + ![image-20230514122632830](./img/image-20230514122632830.png)
+  + <img src='./img/image-20230514122632830.png'/>
 + **函数类型**：一个function，这个函数会在安装插件时自动执行；
-  + ![image-20230514122639486](./img/image-20230514122639486.png)
+  + <img src='./img/image-20230514122639486.png'/>
 
 插件可以完成的功能没有限制，比如下面的几种都是可以的：
 
