@@ -520,7 +520,6 @@ https://github.com/vuejs/core
     + <img src=".\img\image-20230319110511250.png" alt="image-20230319110511250" style="zoom:50%;" />
 
 + **有key**，那么就使用patchkeyedChildren方法 （比较中如果新旧都有值，则进行的是更新操作(update)，如果只有新节点，则进行的是挂载操作(mount),只有旧节点，则进行的是卸载操作(unmount))
-
   + **从头开始遍历（while），比较新旧节点是否相同（节点类型相同，并且key相同）**
     + 相同则，继续遍历执行patch操作
     + 不同则，跳出循环
@@ -533,7 +532,7 @@ https://github.com/vuejs/core
     + <img src='.\img\image-20230319115314013.png'/>
   + **如果新的节点遍历完毕，但是依然有旧的节点，那么就移除旧节点**
     + <img src='.\img\image-20230319115353607.png'/>
-
+  
   + **特殊的情况，中间还有很多未知的或者乱序的节点：**
     + <img src='.\img\image-20230319115619405.png'/>
 
@@ -1796,7 +1795,7 @@ https://github.com/vuejs/core
   + **在babel.config.js配置文件中配置插件：**
     + <img src='.\img\image-20230503190148263.png'/><img src='.\img\image-20230503190759545.png'/>
 
-## 18.自定义组件
+## 18.自定义指令
 
 ​	在Vue中，代码的复用和抽象主要还是通过组件；通常在某些情况下，你**需要对DOM元素进行底层操作**，这个时候就会用到自定义指令；
 
